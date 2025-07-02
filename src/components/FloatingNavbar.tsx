@@ -47,16 +47,17 @@ const FloatingNavbar = () => {
       >
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-2 floating-card px-6 py-3">
-          {navItems.map((item) => {
+          {navItems.map((item, index) => {
             const Icon = item.icon;
+            const isOrange = index % 2 === 0; // Alternate between red and orange
             return (
               <Link
                 key={item.name}
                 to={item.path}
                 className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                   isActive(item.path)
-                    ? 'bg-primary text-primary-foreground shadow-[var(--glow-primary)]'
-                    : 'hover:bg-secondary/50 text-muted-foreground hover:text-foreground'
+                    ? `${isOrange ? 'bg-orange-500' : 'bg-red-500'} text-white shadow-lg`
+                    : `hover:bg-secondary/50 ${isOrange ? 'text-orange-400 hover:text-orange-300' : 'text-red-400 hover:text-red-300'}`
                 }`}
               >
                 <Icon 
@@ -68,7 +69,9 @@ const FloatingNavbar = () => {
                 
                 {/* Animated dot indicator */}
                 <div
-                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-primary transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    isOrange ? 'bg-orange-400' : 'bg-red-400'
+                  } transition-all duration-300 ${
                     isActive(item.path) ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                   }`}
                 />
@@ -84,9 +87,9 @@ const FloatingNavbar = () => {
             className="floating-card p-3"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 icon-bounce" />
+              <X className="w-6 h-6 icon-bounce text-red-400" />
             ) : (
-              <Menu className="w-6 h-6 icon-float" />
+              <Menu className="w-6 h-6 icon-float text-orange-400" />
             )}
           </button>
 
@@ -101,6 +104,7 @@ const FloatingNavbar = () => {
             <div className="py-2 min-w-[200px]">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
+                const isOrange = index % 2 === 0;
                 return (
                   <Link
                     key={item.name}
@@ -108,8 +112,8 @@ const FloatingNavbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`flex items-center space-x-3 px-4 py-3 transition-all duration-300 animate-slide-up ${
                       isActive(item.path)
-                        ? 'bg-primary text-primary-foreground'
-                        : 'hover:bg-secondary/50 text-muted-foreground hover:text-foreground'
+                        ? `${isOrange ? 'bg-orange-500' : 'bg-red-500'} text-white`
+                        : `hover:bg-secondary/50 ${isOrange ? 'text-orange-400 hover:text-orange-300' : 'text-red-400 hover:text-red-300'}`
                     }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
