@@ -28,14 +28,13 @@ const FloatingNavbar = () => {
 
   return (
     <>
-      {/* Logo in top left corner - increased by 40% with full transparency */}
+      {/* Logo in top left corner with animation */}
       <div className="fixed top-4 left-4 z-50">
         <Link to="/" className="block">
           <img 
             src="/lovable-uploads/701dd089-6545-4ee7-8e74-7ab9dad361ec.png" 
             alt="The RecruitIQ" 
-            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] opacity-100 hover:opacity-90 transition-opacity duration-300"
-            style={{ mixBlendMode: 'normal' }}
+            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] logo-animated"
           />
         </Link>
       </div>
