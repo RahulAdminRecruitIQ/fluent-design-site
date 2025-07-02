@@ -1,7 +1,8 @@
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { WorldMap } from '@/components/ui/world-map';
 import { useState } from 'react';
 
 const ContactUs = () => {
@@ -16,7 +17,7 @@ const ContactUs = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@company.com',
+      details: 'hello@recruitiq.com',
       description: 'Send us an email anytime',
     },
     {
@@ -36,6 +37,79 @@ const ContactUs = () => {
       title: 'Business Hours',
       details: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST',
+    },
+  ];
+
+  // Global office locations for the world map
+  const globalOffices = [
+    {
+      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
+      end: { lat: 37.7749, lng: -122.4194, label: "San Francisco" }, // San Francisco
+    },
+    {
+      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
+      end: { lat: 51.5074, lng: -0.1278, label: "London" }, // London
+    },
+    {
+      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
+      end: { lat: 19.0760, lng: 72.8777, label: "Mumbai" }, // Mumbai
+    },
+    {
+      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
+      end: { lat: 1.3521, lng: 103.8198, label: "Singapore" }, // Singapore
+    },
+    {
+      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
+      end: { lat: 35.6762, lng: 139.6503, label: "Tokyo" }, // Tokyo
+    },
+    {
+      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
+      end: { lat: -33.8688, lng: 151.2093, label: "Sydney" }, // Sydney
+    },
+  ];
+
+  const officeLocations = [
+    {
+      city: "New York",
+      country: "USA",
+      address: "123 Business Street, Suite 100",
+      phone: "+1 (555) 123-4567",
+      type: "Headquarters",
+    },
+    {
+      city: "San Francisco",
+      country: "USA",
+      address: "456 Tech Avenue, Floor 15",
+      phone: "+1 (555) 234-5678",
+      type: "West Coast Hub",
+    },
+    {
+      city: "London",
+      country: "UK",
+      address: "789 Financial District, Level 20",
+      phone: "+44 20 7123 4567",
+      type: "European Operations",
+    },
+    {
+      city: "Mumbai",
+      country: "India",
+      address: "321 Business Park, Tower A",
+      phone: "+91 22 1234 5678",
+      type: "Asia Pacific Hub",
+    },
+    {
+      city: "Singapore",
+      country: "Singapore",
+      address: "654 Marina Bay, Suite 30",
+      phone: "+65 6123 4567",
+      type: "Southeast Asia",
+    },
+    {
+      city: "Tokyo",
+      country: "Japan",
+      address: "987 Shibuya District, Floor 25",
+      phone: "+81 3 1234 5678",
+      type: "Japan Operations",
     },
   ];
 
@@ -99,8 +173,58 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Contact Form & Map */}
+      {/* Global Presence Section with World Map */}
       <section className="py-20 px-4 bg-secondary/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
+              Our <span className="text-gradient-primary">Global Presence</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
+              With offices across the globe, we're always close to our clients and talent network.
+            </p>
+          </div>
+
+          {/* World Map */}
+          <div className="floating-card p-8 mb-12 animate-slide-up delay-300">
+            <div className="h-96 w-full">
+              <WorldMap
+                dots={globalOffices}
+                lineColor="#3b82f6"
+              />
+            </div>
+          </div>
+
+          {/* Office Locations Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {officeLocations.map((office, index) => (
+              <div
+                key={`${office.city}-${office.country}`}
+                className="floating-card p-6 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Building2 className="w-6 h-6 text-accent" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <h3 className="text-lg font-semibold">{office.city}</h3>
+                      <span className="text-sm text-muted-foreground">({office.country})</span>
+                    </div>
+                    <p className="text-primary text-sm font-medium mb-2">{office.type}</p>
+                    <p className="text-muted-foreground text-sm mb-2">{office.address}</p>
+                    <p className="text-accent text-sm font-medium">{office.phone}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Additional Info */}
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -187,43 +311,55 @@ const ContactUs = () => {
               </div>
             </div>
 
-            {/* Map & Additional Info */}
+            {/* Additional Info */}
             <div className="animate-slide-right">
               <div className="floating-card p-8 h-full">
                 <h3 className="text-2xl font-bold mb-6">
-                  Visit Our <span className="text-gradient-primary">Office</span>
+                  Why Choose <span className="text-gradient-primary">RecruitIQ</span>?
                 </h3>
                 
-                {/* Mock Map */}
-                <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-6 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-                  <div className="relative z-10 text-center">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-3 icon-bounce" />
-                    <p className="text-lg font-semibold">Our Location</p>
-                    <p className="text-muted-foreground">123 Business Street</p>
-                    <p className="text-muted-foreground">New York, NY 10001</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <Clock className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Office Hours</h4>
-                      <p className="text-muted-foreground text-sm">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground text-sm">Saturday: 10:00 AM - 4:00 PM</p>
-                      <p className="text-muted-foreground text-sm">Sunday: Closed</p>
+                      <h4 className="font-semibold mb-1">24/7 Global Support</h4>
+                      <p className="text-muted-foreground text-sm">Round-the-clock assistance across all time zones with dedicated account managers in each region.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
+                    <Building2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold mb-1">Global Talent Network</h4>
+                      <p className="text-muted-foreground text-sm">Access to pre-vetted professionals across 6 major tech hubs worldwide.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <Phone className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Emergency Contact</h4>
-                      <p className="text-muted-foreground text-sm">For urgent matters outside business hours</p>
-                      <p className="text-accent font-medium">+1 (555) 987-6543</p>
+                      <h4 className="font-semibold mb-1">Local Expertise</h4>
+                      <p className="text-muted-foreground text-sm">Deep understanding of local markets, regulations, and cultural nuances in each region.</p>
                     </div>
                   </div>
+
+                  <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
+                    <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold mb-1">Strategic Locations</h4>
+                      <p className="text-muted-foreground text-sm">Offices strategically located in major business districts for easy access and collaboration.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg">
+                  <h4 className="font-semibold mb-2">Ready to Get Started?</h4>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Schedule a free consultation with our experts to discuss your talent needs.
+                  </p>
+                  <Button className="btn-gradient-accent w-full">
+                    Schedule Free Consultation
+                  </Button>
                 </div>
               </div>
             </div>
@@ -232,34 +368,34 @@ const ContactUs = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-secondary/5">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Frequently Asked <span className="text-gradient-accent">Questions</span>
             </h2>
             <p className="text-muted-foreground animate-slide-up delay-200">
-              Quick answers to common questions about our services.
+              Quick answers to common questions about our global services.
             </p>
           </div>
 
           <div className="space-y-6">
             {[
               {
-                question: 'How long does a typical project take?',
-                answer: 'Project timelines vary based on complexity, but most web development projects take 4-12 weeks from start to finish.',
+                question: 'Do you provide talent in all your office locations?',
+                answer: 'Yes, we have active talent networks in all our global offices. Each location specializes in local market expertise while maintaining our global quality standards.',
               },
               {
-                question: 'Do you provide ongoing support?',
-                answer: 'Yes, we offer comprehensive support and maintenance packages to keep your project running smoothly after launch.',
+                question: 'How do you handle different time zones?',
+                answer: 'Our global presence ensures we can provide support during your business hours. We have dedicated teams in each region for seamless communication.',
               },
               {
-                question: 'What technologies do you work with?',
-                answer: 'We specialize in modern technologies including React, Node.js, Python, and cloud platforms like AWS and Google Cloud.',
+                question: 'What are your response times across different regions?',
+                answer: 'We guarantee 24-hour response times globally, with most inquiries answered within 4-6 hours during local business hours.',
               },
               {
-                question: 'Can you work with my existing team?',
-                answer: 'Absolutely! We collaborate effectively with in-house teams and can adapt to your existing workflows and processes.',
+                question: 'Can you help with international talent relocation?',
+                answer: 'Absolutely! We provide comprehensive relocation support including visa assistance, housing, and cultural integration programs.',
               },
             ].map((faq, index) => (
               <div
@@ -276,23 +412,23 @@ const ContactUs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-secondary/5">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="floating-card p-12 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Ready to Start Your <span className="text-gradient-primary">Journey</span>?
+                Ready to Connect <span className="text-gradient-primary">Globally</span>?
               </h2>
               <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Let's discuss your project and explore how we can help you achieve your goals.
+                Let's discuss your project and explore how our global network can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Button className="btn-gradient-accent">
-                  Schedule Free Consultation
+                  Schedule Global Consultation
                 </Button>
                 <Button variant="outline" className="glass-effect hover:bg-secondary/20">
-                  Download Our Brochure
+                  Download Global Brochure
                 </Button>
               </div>
             </div>
