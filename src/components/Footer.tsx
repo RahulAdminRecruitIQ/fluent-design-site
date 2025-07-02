@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -7,6 +6,7 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'Partners', path: '/partners' },
     { name: 'Talent Pool', path: '/customers' },
     { name: 'Contact Us', path: '/contact' },
   ];
@@ -36,7 +36,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/701dd089-6545-4ee7-8e74-7ab9dad361ec.png" 
                 alt="The RecruitIQ" 
-                className="w-16 h-16 opacity-80 mix-blend-screen"
+                className="w-16 h-16 opacity-100"
               />
               <div className="ml-3">
                 <h3 className="text-xl font-bold text-gradient-primary">RecruitIQ</h3>

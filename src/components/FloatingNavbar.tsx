@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Users, Briefcase, Star, Mail, Menu, X } from 'lucide-react';
+import { Home, Users, Briefcase, Star, Mail, Menu, X, Handshake } from 'lucide-react';
 
 const FloatingNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,6 +11,7 @@ const FloatingNavbar = () => {
     { name: 'Home', path: '/', icon: Home },
     { name: 'About Us', path: '/about', icon: Users },
     { name: 'Services', path: '/services', icon: Briefcase },
+    { name: 'Partners', path: '/partners', icon: Handshake },
     { name: 'Talent Pool', path: '/customers', icon: Star },
     { name: 'Contact Us', path: '/contact', icon: Mail },
   ];
@@ -28,13 +28,14 @@ const FloatingNavbar = () => {
 
   return (
     <>
-      {/* Logo in top left corner - increased by 40% */}
+      {/* Logo in top left corner - increased by 40% with full transparency */}
       <div className="fixed top-4 left-4 z-50">
         <Link to="/" className="block">
           <img 
             src="/lovable-uploads/701dd089-6545-4ee7-8e74-7ab9dad361ec.png" 
             alt="The RecruitIQ" 
-            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-screen"
+            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] opacity-100 hover:opacity-90 transition-opacity duration-300"
+            style={{ mixBlendMode: 'normal' }}
           />
         </Link>
       </div>
