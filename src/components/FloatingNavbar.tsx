@@ -45,8 +45,8 @@ const FloatingNavbar = () => {
           isScrolled ? 'scale-95' : 'scale-100'
         }`}
       >
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-2 floating-card px-6 py-3">
+        {/* Desktop Navigation - Increased width and spacing */}
+        <div className="hidden lg:flex items-center space-x-1 floating-card px-8 py-3 min-w-[800px]">
           {navItems.map((item, index) => {
             const Icon = item.icon;
             const isOrange = index % 2 === 0; // Alternate between red and orange
@@ -54,7 +54,7 @@ const FloatingNavbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
+                className={`relative flex items-center space-x-2 px-5 py-2 rounded-lg transition-all duration-300 group whitespace-nowrap ${
                   isActive(item.path)
                     ? `${isOrange ? 'bg-orange-500' : 'bg-red-500'} text-white shadow-lg`
                     : `hover:bg-secondary/50 ${isOrange ? 'text-orange-400 hover:text-orange-300' : 'text-red-400 hover:text-red-300'}`
@@ -66,6 +66,41 @@ const FloatingNavbar = () => {
                   }`} 
                 />
                 <span className="text-sm font-medium">{item.name}</span>
+                
+                {/* Animated dot indicator */}
+                <div
+                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    isOrange ? 'bg-orange-400' : 'bg-red-400'
+                  } transition-all duration-300 ${
+                    isActive(item.path) ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                  }`}
+                />
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Tablet Navigation - Medium screens */}
+        <div className="hidden md:flex lg:hidden items-center space-x-1 floating-card px-6 py-3 min-w-[700px]">
+          {navItems.map((item, index) => {
+            const Icon = item.icon;
+            const isOrange = index % 2 === 0;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`relative flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 group whitespace-nowrap ${
+                  isActive(item.path)
+                    ? `${isOrange ? 'bg-orange-500' : 'bg-red-500'} text-white shadow-lg`
+                    : `hover:bg-secondary/50 ${isOrange ? 'text-orange-400 hover:text-orange-300' : 'text-red-400 hover:text-red-300'}`
+                }`}
+              >
+                <Icon 
+                  className={`w-4 h-4 transition-all duration-300 ${
+                    isActive(item.path) ? 'icon-pulse' : 'group-hover:icon-float'
+                  }`} 
+                />
+                <span className="text-xs font-medium">{item.name}</span>
                 
                 {/* Animated dot indicator */}
                 <div
