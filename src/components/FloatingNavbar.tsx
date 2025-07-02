@@ -12,7 +12,7 @@ const FloatingNavbar = () => {
     { name: 'Home', path: '/', icon: Home },
     { name: 'About Us', path: '/about', icon: Users },
     { name: 'Services', path: '/services', icon: Briefcase },
-    { name: 'Customers', path: '/customers', icon: Star },
+    { name: 'Talent Pool', path: '/customers', icon: Star },
     { name: 'Contact Us', path: '/contact', icon: Mail },
   ];
 
@@ -28,13 +28,13 @@ const FloatingNavbar = () => {
 
   return (
     <>
-      {/* Logo in top left corner */}
+      {/* Logo in top left corner - increased by 40% */}
       <div className="fixed top-4 left-4 z-50">
         <Link to="/" className="block">
           <img 
             src="/lovable-uploads/701dd089-6545-4ee7-8e74-7ab9dad361ec.png" 
             alt="The RecruitIQ" 
-            className="w-16 h-16 md:w-20 md:h-20 opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-screen"
+            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-screen"
           />
         </Link>
       </div>

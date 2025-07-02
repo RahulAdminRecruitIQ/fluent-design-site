@@ -1,23 +1,31 @@
-import { ArrowRight, Sparkles, Zap, Globe, Shield } from 'lucide-react';
+
+import { ArrowRight, Users, TrendingUp, Globe, Shield, CheckCircle, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Home = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Optimized performance for the best user experience',
+      icon: Users,
+      title: 'Elite Tech Talent',
+      description: 'Access to top-tier developers, engineers, and tech professionals',
     },
     {
-      icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime',
+      icon: TrendingUp,
+      title: 'Proven Results',
+      description: '95% placement success rate with Fortune 500 companies',
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving customers worldwide with local support',
+      title: 'Nationwide Reach',
+      description: 'Serving clients across all major US tech hubs',
     },
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Tech Professionals Placed' },
+    { number: '150+', label: 'Partner Companies' },
+    { number: '95%', label: 'Success Rate' },
+    { number: '24/7', label: 'Support Available' },
   ];
 
   return (
@@ -32,29 +40,49 @@ const Home = () => {
 
           <div className="relative z-10">
             <div className="inline-flex items-center space-x-2 floating-card px-4 py-2 mb-8 animate-slide-up">
-              <Sparkles className="w-4 h-4 text-primary icon-pulse" />
-              <span className="text-sm font-medium">Welcome to the Future</span>
+              <Star className="w-4 h-4 text-primary icon-pulse" />
+              <span className="text-sm font-medium">America's Premier Tech Talent Partner</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up delay-200">
-              <span className="text-gradient-primary">Revolutionary</span>
+              <span className="text-gradient-primary">Connecting</span>
               <br />
-              Digital Solutions
+              Tech Talent with Innovation
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up delay-300">
-              Transform your business with cutting-edge technology and innovative solutions that drive growth and success.
+              We bridge the gap between exceptional tech professionals and forward-thinking companies across the United States.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-400">
               <Button className="btn-gradient-primary group">
-                Get Started
+                Find Talent
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" className="glass-effect hover:bg-secondary/20">
-                Learn More
+                Join Our Network
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className="floating-card p-6 text-center animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-gradient-primary mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -64,10 +92,10 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
-              Why Choose <span className="text-gradient-accent">Our Platform</span>
+              Why Choose <span className="text-gradient-accent">RecruitIQ</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
-              Experience the power of modern technology with features designed for tomorrow's challenges.
+              Your trusted partner in building high-performing tech teams with America's finest talent.
             </p>
           </div>
 
@@ -100,15 +128,20 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Ready to <span className="text-gradient-primary">Transform</span> Your Business?
+                Ready to <span className="text-gradient-primary">Scale</span> Your Tech Team?
               </h2>
               <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Join thousands of satisfied customers who have revolutionized their operations with our platform.
+                Connect with pre-vetted tech professionals who can drive your company's digital transformation.
               </p>
-              <Button className="btn-gradient-accent animate-slide-up delay-300">
-                Start Your Journey
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
+                <Button className="btn-gradient-accent">
+                  Get Started Today
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button variant="outline" className="glass-effect">
+                  Schedule Consultation
+                </Button>
+              </div>
             </div>
           </div>
         </div>
