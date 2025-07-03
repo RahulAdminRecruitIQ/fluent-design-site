@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Clock, Send, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -61,24 +60,6 @@ const ContactUs = () => {
       lng: -122.4194,
     },
     {
-      city: "Austin",
-      country: "USA",
-      address: "789 Innovation Drive, Building C",
-      phone: "+1 (555) 345-6789",
-      type: "Central Operations",
-      lat: 30.2672,
-      lng: -97.7431,
-    },
-    {
-      city: "Boston",
-      country: "USA",
-      address: "321 Tech Square, Floor 8",
-      phone: "+1 (555) 456-7890",
-      type: "East Coast Hub",
-      lat: 42.3601,
-      lng: -71.0589,
-    },
-    {
       city: "Seattle",
       country: "USA",
       address: "654 Pacific Northwest Plaza",
@@ -86,15 +67,6 @@ const ContactUs = () => {
       type: "Northwest Operations",
       lat: 47.6062,
       lng: -122.3321,
-    },
-    {
-      city: "Chicago",
-      country: "USA",
-      address: "987 Midwest Center, Suite 25",
-      phone: "+1 (555) 678-9012",
-      type: "Midwest Hub",
-      lat: 41.8781,
-      lng: -87.6298,
     },
   ];
 
@@ -172,15 +144,15 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* US Nationwide Presence Section with World Map */}
+      {/* US Key Locations Section with World Map */}
       <section className="py-20 px-4 bg-secondary/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
-              Our <span className="text-gradient-primary">Nationwide Presence</span>
+              Our <span className="text-gradient-primary">Key Locations</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
-              Strategically located across major US tech hubs to serve you better and connect with top talent nationwide.
+              Strategically positioned across major US tech hubs to serve you better and connect with top talent in key markets.
             </p>
           </div>
 
@@ -329,8 +301,8 @@ const ContactUs = () => {
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <Building2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Nationwide Tech Talent</h4>
-                      <p className="text-muted-foreground text-sm">Access to top-tier developers, engineers, and tech leaders across 6 major US innovation hubs.</p>
+                      <h4 className="font-semibold mb-1">Strategic Tech Hubs</h4>
+                      <p className="text-muted-foreground text-sm">Access to top-tier developers, engineers, and tech leaders across 3 major US innovation centers.</p>
                     </div>
                   </div>
 
@@ -345,8 +317,8 @@ const ContactUs = () => {
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Strategic US Locations</h4>
-                      <p className="text-muted-foreground text-sm">Offices in key tech cities ensuring seamless collaboration and local support.</p>
+                      <h4 className="font-semibold mb-1">Key US Locations</h4>
+                      <p className="text-muted-foreground text-sm">Offices in essential tech cities ensuring seamless collaboration and local support.</p>
                     </div>
                   </div>
                 </div>
@@ -420,7 +392,7 @@ const ContactUs = () => {
                 Ready to Build Your <span className="text-gradient-primary">Dream Tech Team</span>?
               </h2>
               <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Let's discuss your tech hiring needs and explore how our nationwide network can accelerate your growth.
+                Let's discuss your tech hiring needs and explore how our strategic network can accelerate your growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Button className="btn-gradient-accent">
