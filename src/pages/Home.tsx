@@ -34,6 +34,17 @@ const Home = () => {
     navigate('/customers');
   };
 
+  const handleGetStarted = () => {
+    navigate('/contact');
+    // Scroll to the contact form section after navigation
+    setTimeout(() => {
+      const contactFormSection = document.querySelector('form');
+      if (contactFormSection) {
+        contactFormSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -140,7 +151,7 @@ const Home = () => {
                 Connect with pre-vetted tech professionals who can drive your company's digital transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
-                <Button className="btn-gradient-accent">
+                <Button onClick={handleGetStarted} className="btn-gradient-accent">
                   Get Started Today
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
