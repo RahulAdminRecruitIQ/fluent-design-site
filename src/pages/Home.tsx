@@ -1,8 +1,11 @@
 
 import { ArrowRight, Users, TrendingUp, Globe, Shield, CheckCircle, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const features = [
     {
       icon: Users,
@@ -22,11 +25,15 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Tech Professionals Placed' },
+    { number: '500+', label: 'Powered by a community of 500+ passionate tech innovators and supported by 20+ strategic partners — from investors and mentors to industry collaborators.' },
     { number: '150+', label: 'Partner Companies' },
     { number: '95%', label: 'Success Rate' },
     { number: '24/7', label: 'Support Available' },
   ];
+
+  const handleFindTalent = () => {
+    navigate('/customers');
+  };
 
   return (
     <div className="min-h-screen">
@@ -55,7 +62,7 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-400">
-              <Button className="btn-gradient-primary group">
+              <Button onClick={handleFindTalent} className="btn-gradient-primary group">
                 Find Talent
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
