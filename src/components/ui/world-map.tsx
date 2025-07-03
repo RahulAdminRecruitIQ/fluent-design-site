@@ -1,3 +1,4 @@
+
 "use client";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -33,7 +34,7 @@ export function WorldMap({
 
   const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: number }) => {
     const midX = (start.x + end.x) / 2;
-    const midY = Math.min(start.y, end.y) - 50;
+    const midY = Math.min(start.y, end.y) - 80;
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
 
@@ -43,38 +44,104 @@ export function WorldMap({
     return { x, y };
   };
 
+  // Animated color variants
+  const colorVariants = [
+    "#ef4444", // red
+    "#f97316", // orange  
+    "#eab308", // yellow
+    "#22c55e", // green
+    "#3b82f6", // blue
+    "#a855f7", // purple
+    "#ec4899", // pink
+  ];
+
   return (
     <div className="w-full h-full relative">
       <svg
         ref={svgRef}
-        viewBox="0 0 1000 500"
-        className="w-full h-full"
+        viewBox="0 0 1200 600"
+        className="w-full h-full min-h-[500px]"
         style={{ background: "transparent" }}
       >
-        {/* World Map SVG Path */}
+        {/* Animated background gradient */}
+        <defs>
+          <motion.linearGradient
+            id="worldMapGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+            animate={{
+              x1: ["0%", "100%", "0%"],
+              y1: ["0%", "100%", "0%"],
+              x2: ["100%", "0%", "100%"],
+              y2: ["100%", "0%", "100%"],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+            <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+          </motion.linearGradient>
+        </defs>
+
+        {/* Enhanced World Map SVG Path */}
         <g>
-          <path
-            d="M158.5 200.5c-1.5-2.5-3.5-4.5-6-6c-2.5-1.5-5.5-2.5-8.5-2.5s-6 1-8.5 2.5c-2.5 1.5-4.5 3.5-6 6c-1.5 2.5-2.5 5.5-2.5 8.5s1 6 2.5 8.5c1.5 2.5 3.5 4.5 6 6c2.5 1.5 5.5 2.5 8.5 2.5s6-1 8.5-2.5c2.5-1.5 4.5-3.5 6-6c1.5-2.5 2.5-5.5 2.5-8.5s-1-6-2.5-8.5z"
+          {/* Main continents with animated colors */}
+          <motion.path
+            d="M150 200 L350 180 L550 190 L750 200 L950 210 L1050 200 L1150 190 L1100 280 L1000 320 L900 340 L800 330 L700 320 L600 330 L500 340 L400 330 L300 320 L200 330 L150 340 Z"
+            fill="url(#worldMapGradient)"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeOpacity="0.4"
+            className="text-primary/30"
+            animate={{
+              strokeOpacity: [0.2, 0.6, 0.2],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          
+          {/* Secondary continent */}
+          <motion.path
+            d="M250 380 L450 370 L650 380 L850 390 L950 410 L900 480 L800 500 L700 490 L600 480 L500 490 L400 500 L300 490 L250 480 Z"
+            fill="url(#worldMapGradient)"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeOpacity="0.3"
+            className="text-accent/30"
+            animate={{
+              strokeOpacity: [0.1, 0.5, 0.1],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+
+          {/* Additional landmasses */}
+          <motion.path
+            d="M800 150 L900 140 L1000 145 L1050 160 L1000 180 L900 175 L800 170 Z"
             fill="currentColor"
             className="text-muted-foreground/20"
-          />
-          {/* Simplified world map outline */}
-          <path
-            d="M100 150 L200 140 L300 145 L400 150 L500 155 L600 150 L700 145 L800 150 L900 155 L900 200 L850 220 L800 240 L750 250 L700 245 L650 240 L600 245 L550 250 L500 245 L450 240 L400 245 L350 250 L300 245 L250 240 L200 245 L150 250 L100 245 Z"
-            fill="currentColor"
-            className="text-muted-foreground/10"
-            stroke="currentColor"
-            strokeWidth="1"
-            strokeOpacity="0.3"
-          />
-          {/* Additional continents */}
-          <path
-            d="M200 300 L300 295 L400 300 L500 305 L600 300 L700 295 L800 300 L850 320 L800 340 L750 350 L700 345 L650 340 L600 345 L550 350 L500 345 L450 340 L400 345 L350 350 L300 345 L250 340 L200 345 Z"
-            fill="currentColor"
-            className="text-muted-foreground/10"
-            stroke="currentColor"
-            strokeWidth="1"
-            strokeOpacity="0.3"
+            animate={{
+              opacity: [0.2, 0.4, 0.2],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
           />
         </g>
 
@@ -82,60 +149,156 @@ export function WorldMap({
         {dots.map((dot, i) => {
           const startPoint = projectCoordinate(dot.start.lat, dot.start.lng);
           const endPoint = projectCoordinate(dot.end.lat, dot.end.lng);
+          const currentColor = colorVariants[i % colorVariants.length];
           
           return (
             <g key={i}>
-              {/* Connection line */}
+              {/* Animated connection line with color cycling */}
               <motion.path
                 d={createCurvedPath(startPoint, endPoint)}
                 fill="none"
-                stroke={lineColor}
-                strokeWidth="2"
-                strokeOpacity="0.6"
+                stroke={currentColor}
+                strokeWidth="3"
+                strokeOpacity="0.8"
                 initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
+                animate={{ 
+                  pathLength: [0, 1, 0],
+                  stroke: colorVariants
+                }}
                 transition={{
-                  duration: 2,
-                  delay: i * 0.5,
-                  repeat: Infinity,
-                  repeatDelay: 3,
+                  pathLength: {
+                    duration: 3,
+                    delay: i * 0.5,
+                    repeat: Infinity,
+                    repeatDelay: 2,
+                    ease: "easeInOut"
+                  },
+                  stroke: {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }
                 }}
               />
               
-              {/* Start dot */}
+              {/* Pulsing start dot */}
               <motion.circle
                 cx={startPoint.x}
                 cy={startPoint.y}
-                r="4"
-                fill={lineColor}
-                initial={{ scale: 0 }}
-                animate={{ scale: [0, 1, 1.2, 1] }}
+                r="6"
+                fill={currentColor}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ 
+                  scale: [0, 1, 1.5, 1],
+                  opacity: [0, 1, 0.8, 1],
+                  fill: colorVariants
+                }}
                 transition={{
-                  duration: 1,
-                  delay: i * 0.2,
-                  repeat: Infinity,
-                  repeatDelay: 4,
+                  scale: {
+                    duration: 2,
+                    delay: i * 0.3,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeOut"
+                  },
+                  opacity: {
+                    duration: 2,
+                    delay: i * 0.3,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeOut"
+                  },
+                  fill: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }
                 }}
               />
               
-              {/* End dot */}
+              {/* Pulsing end dot */}
               <motion.circle
                 cx={endPoint.x}
                 cy={endPoint.y}
-                r="4"
-                fill={lineColor}
-                initial={{ scale: 0 }}
-                animate={{ scale: [0, 1, 1.2, 1] }}
+                r="6"
+                fill={currentColor}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ 
+                  scale: [0, 1, 1.5, 1],
+                  opacity: [0, 1, 0.8, 1],
+                  fill: colorVariants
+                }}
                 transition={{
-                  duration: 1,
-                  delay: i * 0.2 + 0.5,
+                  scale: {
+                    duration: 2,
+                    delay: i * 0.3 + 0.8,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeOut"
+                  },
+                  opacity: {
+                    duration: 2,
+                    delay: i * 0.3 + 0.8,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeOut"
+                  },
+                  fill: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "linear",
+                    delay: 0.5
+                  }
+                }}
+              />
+
+              {/* Ripple effect around dots */}
+              <motion.circle
+                cx={startPoint.x}
+                cy={startPoint.y}
+                r="20"
+                fill="none"
+                stroke={currentColor}
+                strokeWidth="2"
+                strokeOpacity="0"
+                animate={{
+                  r: [6, 25, 6],
+                  strokeOpacity: [0.6, 0, 0.6],
+                  stroke: colorVariants
+                }}
+                transition={{
+                  duration: 3,
+                  delay: i * 0.4,
                   repeat: Infinity,
-                  repeatDelay: 4,
+                  repeatDelay: 2,
+                  ease: "easeOut"
                 }}
               />
             </g>
           );
         })}
+
+        {/* Floating particles for ambient animation */}
+        {Array.from({ length: 8 }).map((_, i) => (
+          <motion.circle
+            key={`particle-${i}`}
+            r="2"
+            fill="currentColor"
+            className="text-primary/40"
+            animate={{
+              cx: [100 + i * 150, 200 + i * 150, 100 + i * 150],
+              cy: [150 + i * 50, 300 + i * 30, 150 + i * 50],
+              opacity: [0.2, 0.6, 0.2],
+              fill: colorVariants
+            }}
+            transition={{
+              duration: 8 + i,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.5
+            }}
+          />
+        ))}
       </svg>
     </div>
   );

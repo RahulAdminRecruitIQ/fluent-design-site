@@ -186,7 +186,7 @@ const ContactUs = () => {
 
           {/* World Map */}
           <div className="floating-card p-8 mb-12 animate-slide-up delay-300">
-            <div className="h-96 w-full">
+            <div className="h-[600px] w-full">
               <WorldMap
                 dots={worldMapConnections}
                 lineColor="#ef4444"
