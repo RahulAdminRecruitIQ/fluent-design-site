@@ -26,8 +26,8 @@ const Home = () => {
 
   const stats = [
     { number: '500+', label: 'Powered by a community of 500+ passionate tech innovators and supported by 20+ strategic partners — from investors and mentors to industry collaborators.' },
-    { number: '150+', label: 'Partner Companies' },
-    { number: '95%', label: 'Success Rate' },
+    { number: '150+', label: 'We\'re building with the support of a powerful network of innovators, partners, and ecosystem enablers who share our vision.' },
+    { number: '95%', label: 'Our track record shows consistent placement of top tech candidates throughout the US and Canada.' },
     { number: '24/7', label: 'Support Available' },
   ];
 
