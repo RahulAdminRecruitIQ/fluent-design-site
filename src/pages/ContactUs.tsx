@@ -17,7 +17,7 @@ const ContactUs = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@recruitiq.com',
+      details: 'hello@therecruitiq.com',
       description: 'Send us an email anytime',
     },
     {
