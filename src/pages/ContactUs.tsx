@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Clock, Send, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -40,34 +41,6 @@ const ContactUs = () => {
     },
   ];
 
-  // Global office locations for the world map
-  const globalOffices = [
-    {
-      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
-      end: { lat: 37.7749, lng: -122.4194, label: "San Francisco" }, // San Francisco
-    },
-    {
-      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
-      end: { lat: 51.5074, lng: -0.1278, label: "London" }, // London
-    },
-    {
-      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
-      end: { lat: 19.0760, lng: 72.8777, label: "Mumbai" }, // Mumbai
-    },
-    {
-      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
-      end: { lat: 1.3521, lng: 103.8198, label: "Singapore" }, // Singapore
-    },
-    {
-      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
-      end: { lat: 35.6762, lng: 139.6503, label: "Tokyo" }, // Tokyo
-    },
-    {
-      start: { lat: 40.7128, lng: -74.0060, label: "New York HQ" }, // New York
-      end: { lat: -33.8688, lng: 151.2093, label: "Sydney" }, // Sydney
-    },
-  ];
-
   const officeLocations = [
     {
       city: "New York",
@@ -75,6 +48,8 @@ const ContactUs = () => {
       address: "123 Business Street, Suite 100",
       phone: "+1 (555) 123-4567",
       type: "Headquarters",
+      lat: 40.7128,
+      lng: -74.0060,
     },
     {
       city: "San Francisco",
@@ -82,36 +57,60 @@ const ContactUs = () => {
       address: "456 Tech Avenue, Floor 15",
       phone: "+1 (555) 234-5678",
       type: "West Coast Hub",
+      lat: 37.7749,
+      lng: -122.4194,
     },
     {
-      city: "London",
-      country: "UK",
-      address: "789 Financial District, Level 20",
-      phone: "+44 20 7123 4567",
-      type: "European Operations",
+      city: "Austin",
+      country: "USA",
+      address: "789 Innovation Drive, Building C",
+      phone: "+1 (555) 345-6789",
+      type: "Central Operations",
+      lat: 30.2672,
+      lng: -97.7431,
     },
     {
-      city: "Mumbai",
-      country: "India",
-      address: "321 Business Park, Tower A",
-      phone: "+91 22 1234 5678",
-      type: "Asia Pacific Hub",
+      city: "Boston",
+      country: "USA",
+      address: "321 Tech Square, Floor 8",
+      phone: "+1 (555) 456-7890",
+      type: "East Coast Hub",
+      lat: 42.3601,
+      lng: -71.0589,
     },
     {
-      city: "Singapore",
-      country: "Singapore",
-      address: "654 Marina Bay, Suite 30",
-      phone: "+65 6123 4567",
-      type: "Southeast Asia",
+      city: "Seattle",
+      country: "USA",
+      address: "654 Pacific Northwest Plaza",
+      phone: "+1 (555) 567-8901",
+      type: "Northwest Operations",
+      lat: 47.6062,
+      lng: -122.3321,
     },
     {
-      city: "Tokyo",
-      country: "Japan",
-      address: "987 Shibuya District, Floor 25",
-      phone: "+81 3 1234 5678",
-      type: "Japan Operations",
+      city: "Chicago",
+      country: "USA",
+      address: "987 Midwest Center, Suite 25",
+      phone: "+1 (555) 678-9012",
+      type: "Midwest Hub",
+      lat: 41.8781,
+      lng: -87.6298,
     },
   ];
+
+  // Create connections from New York HQ to all other offices for the world map
+  const worldMapConnections = officeLocations.slice(1).map(office => ({
+    start: { 
+      lat: officeLocations[0].lat, 
+      lng: officeLocations[0].lng, 
+      label: `${officeLocations[0].city} HQ` 
+    },
+    end: { 
+      lat: office.lat, 
+      lng: office.lng, 
+      label: `${office.city} Office` 
+    },
+  }));
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -143,7 +142,7 @@ const ContactUs = () => {
             Get in <span className="text-gradient-primary">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-200">
-            Ready to start your project? Have questions about our services? We'd love to hear from you.
+            Connect with America's premier tech talent network. We're here to help you find the perfect tech professionals for your team.
           </p>
         </div>
       </section>
@@ -173,15 +172,15 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Global Presence Section with World Map */}
+      {/* US Nationwide Presence Section with World Map */}
       <section className="py-20 px-4 bg-secondary/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
-              Our <span className="text-gradient-primary">Global Presence</span>
+              Our <span className="text-gradient-primary">Nationwide Presence</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
-              With offices across the globe, we're always close to our clients and talent network.
+              Strategically located across major US tech hubs to serve you better and connect with top talent nationwide.
             </p>
           </div>
 
@@ -189,8 +188,8 @@ const ContactUs = () => {
           <div className="floating-card p-8 mb-12 animate-slide-up delay-300">
             <div className="h-96 w-full">
               <WorldMap
-                dots={globalOffices}
-                lineColor="#3b82f6"
+                dots={worldMapConnections}
+                lineColor="#ef4444"
               />
             </div>
           </div>
@@ -200,7 +199,7 @@ const ContactUs = () => {
             {officeLocations.map((office, index) => (
               <div
                 key={`${office.city}-${office.country}`}
-                className="floating-card p-6 animate-slide-up"
+                className="floating-card p-6 animate-slide-up hover:scale-105 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-4">
@@ -234,7 +233,7 @@ const ContactUs = () => {
                   Send us a <span className="text-gradient-accent">Message</span>
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                  Ready to scale your tech team? Fill out the form below and we'll get back to you within 24 hours.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -283,7 +282,7 @@ const ContactUs = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       className="glass-effect border-border/30 focus:border-primary"
-                      placeholder="Project Inquiry"
+                      placeholder="Talent Acquisition Inquiry"
                     />
                   </div>
 
@@ -299,7 +298,7 @@ const ContactUs = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       className="glass-effect border-border/30 focus:border-primary resize-none"
-                      placeholder="Tell us about your project..."
+                      placeholder="Tell us about your tech talent needs..."
                     />
                   </div>
 
@@ -315,47 +314,47 @@ const ContactUs = () => {
             <div className="animate-slide-right">
               <div className="floating-card p-8 h-full">
                 <h3 className="text-2xl font-bold mb-6">
-                  Why Choose <span className="text-gradient-primary">RecruitIQ</span>?
+                  Why Choose <span className="text-gradient-primary">Our Network</span>?
                 </h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <Clock className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">24/7 Global Support</h4>
-                      <p className="text-muted-foreground text-sm">Round-the-clock assistance across all time zones with dedicated account managers in each region.</p>
+                      <h4 className="font-semibold mb-1">Rapid Talent Matching</h4>
+                      <p className="text-muted-foreground text-sm">Connect with pre-vetted tech professionals within 48 hours across all major US tech markets.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <Building2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Global Talent Network</h4>
-                      <p className="text-muted-foreground text-sm">Access to pre-vetted professionals across 6 major tech hubs worldwide.</p>
+                      <h4 className="font-semibold mb-1">Nationwide Tech Talent</h4>
+                      <p className="text-muted-foreground text-sm">Access to top-tier developers, engineers, and tech leaders across 6 major US innovation hubs.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <Phone className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Local Expertise</h4>
-                      <p className="text-muted-foreground text-sm">Deep understanding of local markets, regulations, and cultural nuances in each region.</p>
+                      <h4 className="font-semibold mb-1">Local Market Expertise</h4>
+                      <p className="text-muted-foreground text-sm">Deep understanding of regional tech ecosystems, salary benchmarks, and hiring trends.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3 p-4 glass-effect rounded-lg">
                     <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Strategic Locations</h4>
-                      <p className="text-muted-foreground text-sm">Offices strategically located in major business districts for easy access and collaboration.</p>
+                      <h4 className="font-semibold mb-1">Strategic US Locations</h4>
+                      <p className="text-muted-foreground text-sm">Offices in key tech cities ensuring seamless collaboration and local support.</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg">
-                  <h4 className="font-semibold mb-2">Ready to Get Started?</h4>
+                  <h4 className="font-semibold mb-2">Ready to Scale Your Tech Team?</h4>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Schedule a free consultation with our experts to discuss your talent needs.
+                    Schedule a free consultation to discuss your tech talent requirements and hiring goals.
                   </p>
                   <Button className="btn-gradient-accent w-full">
                     Schedule Free Consultation
@@ -375,7 +374,7 @@ const ContactUs = () => {
               Frequently Asked <span className="text-gradient-accent">Questions</span>
             </h2>
             <p className="text-muted-foreground animate-slide-up delay-200">
-              Quick answers to common questions about our global services.
+              Quick answers to common questions about our US tech talent services.
             </p>
           </div>
 
@@ -383,19 +382,19 @@ const ContactUs = () => {
             {[
               {
                 question: 'Do you provide talent in all your office locations?',
-                answer: 'Yes, we have active talent networks in all our global offices. Each location specializes in local market expertise while maintaining our global quality standards.',
+                answer: 'Yes, we have active talent networks in all major US tech hubs. Each location specializes in local market expertise while maintaining our national quality standards.',
               },
               {
-                question: 'How do you handle different time zones?',
-                answer: 'Our global presence ensures we can provide support during your business hours. We have dedicated teams in each region for seamless communication.',
+                question: 'How quickly can you source tech talent?',
+                answer: 'We typically present qualified candidates within 48-72 hours for most tech roles, with our extensive pre-vetted talent network across the US.',
               },
               {
-                question: 'What are your response times across different regions?',
-                answer: 'We guarantee 24-hour response times globally, with most inquiries answered within 4-6 hours during local business hours.',
+                question: 'What types of tech roles do you specialize in?',
+                answer: 'We specialize in software engineers, DevOps, data scientists, product managers, tech leads, and C-level tech executives across all major programming languages and frameworks.',
               },
               {
-                question: 'Can you help with international talent relocation?',
-                answer: 'Absolutely! We provide comprehensive relocation support including visa assistance, housing, and cultural integration programs.',
+                question: 'Do you help with remote and hybrid tech roles?',
+                answer: 'Absolutely! We excel at placing remote, hybrid, and on-site tech professionals, understanding the unique dynamics of distributed tech teams.',
               },
             ].map((faq, index) => (
               <div
@@ -418,17 +417,17 @@ const ContactUs = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Ready to Connect <span className="text-gradient-primary">Globally</span>?
+                Ready to Build Your <span className="text-gradient-primary">Dream Tech Team</span>?
               </h2>
               <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Let's discuss your project and explore how our global network can help you achieve your goals.
+                Let's discuss your tech hiring needs and explore how our nationwide network can accelerate your growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Button className="btn-gradient-accent">
-                  Schedule Global Consultation
+                  Start Hiring Today
                 </Button>
                 <Button variant="outline" className="glass-effect hover:bg-secondary/20">
-                  Download Global Brochure
+                  View Our Tech Talent Portfolio
                 </Button>
               </div>
             </div>
