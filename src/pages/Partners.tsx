@@ -123,7 +123,7 @@ const Partners = () => {
               Partnership <span className="text-gradient-accent">Benefits</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
-              Discover the advantages of partnering with RecruitIQ and our extensive network.
+              Discover the advantages of partnering with The RecruitIQ and our extensive network.
             </p>
           </div>
 

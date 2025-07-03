@@ -39,7 +39,7 @@ const Footer = () => {
                 className="w-16 h-16 logo-animated-small"
               />
               <div className="ml-3">
-                <h3 className="text-xl font-bold text-gradient-primary">RecruitIQ</h3>
+                <h3 className="text-xl font-bold text-gradient-primary">The RecruitIQ</h3>
                 <p className="text-sm text-muted-foreground">Tech Talent Partners</p>
               </div>
             </div>
@@ -104,8 +104,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:hello@recruitiq.com" className="text-sm text-foreground hover:text-red-400 transition-colors">
-                    hello@recruitiq.com
+                  <a href="mailto:hello@therecruitiq.com" className="text-sm text-foreground hover:text-red-400 transition-colors">
+                    hello@therecruitiq.com
                   </a>
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Footer = () => {
         <div className="border-t border-border/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 RecruitIQ. All rights reserved.
+              © 2024 The RecruitIQ. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="#" className="text-muted-foreground hover:text-orange-400 transition-colors animated-underline">
