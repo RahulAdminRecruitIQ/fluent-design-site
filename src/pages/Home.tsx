@@ -1,3 +1,4 @@
+
 import { ArrowRight, Users, TrendingUp, Globe, Shield, CheckCircle, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -145,14 +146,17 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Anything's possible when you have the <span className="text-gradient-primary">talent</span>
+                Transform Your Technical Hiring with <span className="text-gradient-primary">Expert Precision</span>
               </h2>
-              <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.
+              <p className="text-muted-foreground mb-8 max-w-3xl mx-auto animate-slide-up delay-200">
+                Partner with industry-leading technical recruiters who understand the nuances of modern software development, 
+                emerging technologies, and the evolving demands of tech organizations. From full-stack developers and DevOps engineers 
+                to AI specialists and cybersecurity experts, we connect you with pre-vetted professionals who drive innovation and 
+                accelerate your digital transformation initiatives.
               </p>
               <div className="flex justify-center animate-slide-up delay-300">
                 <Button onClick={handleGetStarted} className="btn-gradient-accent">
-                  Get Started Today
+                  Begin Your Search Today
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
