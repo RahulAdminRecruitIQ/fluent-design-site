@@ -146,13 +146,14 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Transform Your Technical Hiring with <span className="text-gradient-primary">Expert Precision</span>
+                <span className="text-gradient-primary">Add Specialized Talent</span> Across Your Organization
               </h2>
               <p className="text-muted-foreground mb-8 max-w-3xl mx-auto animate-slide-up delay-200">
-                Partner with industry-leading technical recruiters who understand the nuances of modern software development, 
-                emerging technologies, and the evolving demands of tech organizations. From full-stack developers and DevOps engineers 
-                to AI specialists and cybersecurity experts, we connect you with pre-vetted professionals who drive innovation and 
-                accelerate your digital transformation initiatives.
+                Strategically expand your technical capabilities with precision-matched professionals who integrate seamlessly 
+                into your existing teams. From scaling development operations and implementing DevSecOps practices to advancing 
+                AI initiatives and modernizing legacy systems, we deliver the specialized expertise your organization needs to 
+                accelerate innovation, enhance productivity, and maintain competitive advantage in today's rapidly evolving 
+                technology landscape.
               </p>
               <div className="flex justify-center animate-slide-up delay-300">
                 <Button onClick={handleGetStarted} className="btn-gradient-accent">
