@@ -34,7 +34,7 @@ const FloatingNavbar = () => {
           <img 
             src="/lovable-uploads/701dd089-6545-4ee7-8e74-7ab9dad361ec.png" 
             alt="The RecruitIQ" 
-            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] logo-animated"
+            className="w-[89px] h-[89px] md:w-[112px] md:h-[112px] logo-animated rounded-full object-cover border-2 border-primary/20 shadow-lg"
           />
         </Link>
       </div>

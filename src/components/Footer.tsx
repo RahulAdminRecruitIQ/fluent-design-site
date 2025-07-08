@@ -36,7 +36,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/701dd089-6545-4ee7-8e74-7ab9dad361ec.png" 
                 alt="The RecruitIQ" 
-                className="w-16 h-16 logo-animated-small"
+                className="w-16 h-16 logo-animated-small rounded-full object-cover border border-primary/30 shadow-md"
               />
               <div className="ml-3">
                 <h3 className="text-xl font-bold text-gradient-primary">The RecruitIQ</h3>
