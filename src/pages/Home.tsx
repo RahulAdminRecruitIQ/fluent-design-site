@@ -145,18 +145,15 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Ready to <span className="text-gradient-primary">Scale</span> Your Tech Team?
+                Anything's possible when you have the <span className="text-gradient-primary">talent</span>
               </h2>
               <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Connect with pre-vetted tech professionals who can drive your company's digital transformation.
+                Find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
+              <div className="flex justify-center animate-slide-up delay-300">
                 <Button onClick={handleGetStarted} className="btn-gradient-accent">
                   Get Started Today
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <Button variant="outline" className="glass-effect">
-                  Schedule Consultation
                 </Button>
               </div>
             </div>
