@@ -25,10 +25,10 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Powered by a community of 500+ passionate tech innovators and supported by 20+ strategic partners — from investors and mentors to industry collaborators.' },
-    { number: '150+', label: 'We\'re building with the support of a powerful network of innovators, partners, and ecosystem enablers who share our vision.' },
-    { number: '95%', label: 'Our track record shows consistent placement of top tech candidates throughout the US and Canada.' },
-    { number: '100+', label: 'Technical Skills Assessed & Validated' },
+    { number: '500+', label: 'Elite Tech Professionals - Curated network of senior developers, architects, and engineering leaders across full-stack, cloud, AI/ML, and emerging technologies.' },
+    { number: '150+', label: 'Fortune 500 Partnerships - Trusted by industry leaders to deliver exceptional technical talent for mission-critical projects and digital transformation initiatives.' },
+    { number: '95%', label: 'Placement Success Rate - Proven track record of successful long-term placements with comprehensive technical vetting and cultural fit assessment.' },
+    { number: '100+', label: 'Technical Competencies Evaluated - From React/Node.js to Kubernetes, from cybersecurity to machine learning, covering the full spectrum of modern tech stacks.' },
   ];
 
   const handleFindTalent = () => {
