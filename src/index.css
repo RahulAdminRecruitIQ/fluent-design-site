@@ -111,7 +111,6 @@
   /* Logo Animation Styles */
   .logo-animated {
     @apply opacity-100 transition-all duration-500;
-    border-radius: 30%;
     border: none;
     animation: logo-glow 3s ease-in-out infinite, logo-float 4s ease-in-out infinite;
     filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
@@ -124,7 +123,6 @@
   
   .logo-animated-small {
     @apply opacity-100 transition-all duration-300;
-    border-radius: 30%;
     border: none;
     animation: logo-glow-subtle 4s ease-in-out infinite;
     filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.2));
