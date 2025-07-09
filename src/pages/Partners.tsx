@@ -12,6 +12,15 @@ const Partners = () => {
     { name: 'Capgemini', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Capgemini_201x_logo.svg/320px-Capgemini_201x_logo.svg.png' },
     { name: 'AON', logo: 'https://logos-world.net/wp-content/uploads/2020/12/Aon-Logo.png' },
     { name: 'Optum', logo: 'https://logos-world.net/wp-content/uploads/2021/02/Optum-Logo.png' },
+    { name: 'Texas HHSC', logo: 'https://www.hhs.texas.gov/sites/default/files/images/about-hhs/communications-events/hhs-logo-header.png' },
+    { name: 'State of Virginia', logo: 'https://www.virginia.gov/media/governorvirginiagov/images/featured/seal-of-virginia-reverse.png' },
+    { name: 'Virginia DOT', logo: 'https://www.virginiadot.org/info/resources/VDOT_logo_blue_300.png' },
+    { name: 'California DMV', logo: 'https://www.dmv.ca.gov/portal/wp-content/uploads/2020/06/dmvlogo.png' },
+    { name: 'Florida DOT', logo: 'https://www.fdot.gov/images/fdot-logo.png' },
+    { name: 'New York State', logo: 'https://www.ny.gov/sites/default/files/styles/medium/public/2021-05/NYS-Logo.png' },
+    { name: 'Illinois DHFS', logo: 'https://www2.illinois.gov/gov/PublishingImages/Illinois%20Logo.png' },
+    { name: 'Georgia DHS', logo: 'https://dhs.georgia.gov/sites/dhs.georgia.gov/files/styles/agency_featured/public/related_files/site_page/DHS-logo.png' },
+    { name: 'Ohio DOT', logo: 'https://www.transportation.ohio.gov/static/ODOT+Logo.png' },
   ];
 
   const benefits = [
@@ -64,6 +73,8 @@ const Partners = () => {
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 animate-slide-up">
               Trusted by <span className="text-gradient-accent">Industry Leaders</span>
+              <span className="text-muted-foreground"> & </span>
+              <span className="text-gradient-primary">Government Agencies</span>
             </h2>
           </div>
 
