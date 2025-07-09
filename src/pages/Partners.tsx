@@ -3,15 +3,15 @@ import { Button } from '@/components/ui/button';
 
 const Partners = () => {
   const partners = [
-    { name: 'Hexaware', logo: '🔷' },
-    { name: 'Persistent Systems', logo: '🟦' },
-    { name: 'JPMC', logo: '🏦' },
-    { name: 'Bank of America', logo: '🏛️' },
-    { name: 'Brillio', logo: '💎' },
-    { name: 'Tech Mahindra', logo: '⚡' },
-    { name: 'Capgemini', logo: '🌐' },
-    { name: 'AON', logo: '🛡️' },
-    { name: 'Optum', logo: '🏥' },
+    { name: 'Hexaware', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Hexaware_logo.svg/320px-Hexaware_logo.svg.png' },
+    { name: 'Persistent Systems', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Persistent_Systems_logo.svg/320px-Persistent_Systems_logo.svg.png' },
+    { name: 'JPMC', logo: 'https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png' },
+    { name: 'Bank of America', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Bank-of-America-Logo.png' },
+    { name: 'Brillio', logo: 'https://www.brillio.com/wp-content/uploads/2023/01/brillio-logo.svg' },
+    { name: 'Tech Mahindra', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tech_Mahindra_New_Logo.svg/320px-Tech_Mahindra_New_Logo.svg.png' },
+    { name: 'Capgemini', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Capgemini_201x_logo.svg/320px-Capgemini_201x_logo.svg.png' },
+    { name: 'AON', logo: 'https://logos-world.net/wp-content/uploads/2020/12/Aon-Logo.png' },
+    { name: 'Optum', logo: 'https://logos-world.net/wp-content/uploads/2021/02/Optum-Logo.png' },
   ];
 
   const benefits = [
@@ -76,7 +76,13 @@ const Partners = () => {
                   key={`first-${partner.name}`}
                   className="flex-shrink-0 floating-card p-6 text-center group hover:scale-105 transition-all duration-500 min-w-[200px]"
                 >
-                  <div className="text-4xl mb-3 icon-float">{partner.logo}</div>
+                  <div className="h-16 mb-3 flex items-center justify-center">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="max-h-12 max-w-32 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                   <div className="text-sm font-medium whitespace-nowrap">{partner.name}</div>
                 </div>
               ))}
@@ -86,7 +92,13 @@ const Partners = () => {
                   key={`second-${partner.name}`}
                   className="flex-shrink-0 floating-card p-6 text-center group hover:scale-105 transition-all duration-500 min-w-[200px]"
                 >
-                  <div className="text-4xl mb-3 icon-float">{partner.logo}</div>
+                  <div className="h-16 mb-3 flex items-center justify-center">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="max-h-12 max-w-32 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                   <div className="text-sm font-medium whitespace-nowrap">{partner.name}</div>
                 </div>
               ))}
