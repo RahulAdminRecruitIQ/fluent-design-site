@@ -1,72 +1,70 @@
-import { Code, Palette, Globe, Smartphone, Database, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { Users, Search, Target, Cog, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const services = [
     {
-      icon: Code,
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies and best practices.',
-      features: ['React & Next.js', 'Node.js Backend', 'API Integration', 'Performance Optimization'],
-      price: 'Starting at $2,999',
+      icon: Users,
+      title: 'Staffing and Recruiting Services',
+      description: 'End-to-end recruitment solutions for technical roles, from junior developers to senior architects.',
+      features: ['Full-stack Developer Recruitment', 'DevOps & Cloud Engineers', 'Data Scientists & ML Engineers', 'Product & UX Professionals'],
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop',
+      details: 'Our comprehensive staffing services cover the entire recruitment lifecycle, from sourcing and screening to onboarding. We specialize in finding top-tier technical talent across all levels of experience.',
     },
     {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile apps for iOS and Android.',
-      features: ['React Native', 'Flutter', 'App Store Publishing', 'Push Notifications'],
-      price: 'Starting at $4,999',
+      icon: Search,
+      title: 'Search Services',
+      description: 'Executive search and specialized talent acquisition for leadership and niche technical positions.',
+      features: ['C-Suite Technology Leaders', 'Principal Engineers & Architects', 'Technical Directors', 'Specialized Skill Sets'],
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
+      details: 'Our executive search practice focuses on identifying and attracting exceptional technical leaders who can drive innovation and scale engineering organizations.',
     },
     {
-      icon: Palette,
-      title: 'UI/UX Design',
-      description: 'Beautiful and intuitive user interfaces that engage and convert.',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
-      price: 'Starting at $1,999',
+      icon: Target,
+      title: 'Talent Advisory Services',
+      description: 'Strategic consulting to optimize your hiring processes and build high-performing engineering teams.',
+      features: ['Hiring Strategy Development', 'Compensation Benchmarking', 'Team Structure Design', 'Technical Assessment Framework'],
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
+      details: 'We provide strategic guidance to help you make informed decisions about talent acquisition, team building, and organizational design in the tech space.',
     },
     {
-      icon: Globe,
-      title: 'E-commerce Solutions',
-      description: 'Complete online stores with payment integration and inventory management.',
-      features: ['Shopify/WooCommerce', 'Payment Processing', 'Inventory Management', 'Analytics'],
-      price: 'Starting at $3,999',
+      icon: Cog,
+      title: 'Managed Delivery Services',
+      description: 'Complete project teams and managed services for software development and technical initiatives.',
+      features: ['Dedicated Development Teams', 'Project-based Delivery', 'Technical Leadership', 'Agile Team Management'],
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+      details: 'Our managed delivery services provide you with complete, pre-assembled teams that can hit the ground running on your most critical technical projects.',
     },
     {
-      icon: Database,
-      title: 'Backend Development',
-      description: 'Scalable server infrastructure and database solutions.',
-      features: ['Cloud Architecture', 'Database Design', 'API Development', 'DevOps'],
-      price: 'Starting at $2,499',
-    },
-    {
-      icon: Shield,
-      title: 'Security Solutions',
-      description: 'Comprehensive security audits and implementation.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Monitoring'],
-      price: 'Starting at $1,499',
+      icon: TrendingUp,
+      title: 'Workforce Management Services',
+      description: 'Comprehensive workforce planning and management solutions for technical organizations.',
+      features: ['Workforce Planning & Analytics', 'Contractor Management', 'Skills Gap Analysis', 'Talent Pipeline Development'],
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
+      details: 'We help you optimize your technical workforce through strategic planning, analytics, and comprehensive management of both permanent and contract resources.',
     },
   ];
 
   const process = [
     {
       step: '01',
-      title: 'Discovery',
-      description: 'We understand your needs and define project requirements.',
+      title: 'Discovery & Analysis',
+      description: 'We analyze your technical requirements, team dynamics, and company culture to understand your exact needs.',
     },
     {
       step: '02',
-      title: 'Planning',
-      description: 'Create detailed roadmap and technical specifications.',
+      title: 'Strategic Planning',
+      description: 'Develop a customized recruitment strategy and talent acquisition roadmap aligned with your business goals.',
     },
     {
       step: '03',
-      title: 'Development',
-      description: 'Build your solution using agile development methodology.',
+      title: 'Sourcing & Screening',
+      description: 'Leverage our extensive network and advanced screening processes to identify the best technical talent.',
     },
     {
       step: '04',
-      title: 'Launch',
-      description: 'Deploy and support your project for ongoing success.',
+      title: 'Delivery & Integration',
+      description: 'Seamlessly integrate new hires into your team with ongoing support and performance monitoring.',
     },
   ];
 
@@ -79,7 +77,7 @@ const Services = () => {
             Our <span className="text-gradient-primary">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-200">
-            Comprehensive digital solutions tailored to your business needs. From web development to mobile apps, we've got you covered.
+            Comprehensive tech talent solutions designed to accelerate your engineering capabilities and drive innovation across your organization.
           </p>
         </div>
       </section>
@@ -87,40 +85,48 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-12">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <div
                   key={service.title}
-                  className="floating-card p-8 group hover:scale-105 transition-all duration-500 animate-slide-up"
+                  className="floating-card group hover:scale-105 transition-all duration-500 animate-slide-up overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-7 h-7 text-primary icon-float" />
-                    </div>
-                    <div className="text-2xl font-bold text-gradient-accent">
-                      {service.price}
-                    </div>
-                  </div>
-
-                  <h3 className="text-2xl font-semibold mb-4 animated-underline">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature) => (
-                      <div key={feature} className="flex items-center space-x-3">
-                        <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                  <div className="relative h-64 mb-6">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-4 left-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl">
+                        <Icon className="w-6 h-6 text-white" />
                       </div>
-                    ))}
+                    </div>
                   </div>
 
-                  <Button className="w-full btn-gradient-primary group">
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-semibold mb-4 animated-underline">{service.title}</h3>
+                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <p className="text-sm text-muted-foreground/80 mb-6 leading-relaxed">{service.details}</p>
+
+                    <div className="space-y-3 mb-8">
+                      {service.features.map((feature) => (
+                        <div key={feature} className="flex items-center space-x-3">
+                          <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button className="w-full btn-gradient-primary group">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
                 </div>
               );
             })}
@@ -133,10 +139,10 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
-              Our <span className="text-gradient-accent">Development Process</span>
+              Our <span className="text-gradient-accent">Hiring Process</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
-              A proven methodology that ensures successful project delivery every time.
+              A proven methodology that ensures we deliver the right technical talent for your organization.
             </p>
           </div>
 
@@ -170,10 +176,10 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Ready to Start Your <span className="text-gradient-primary">Project</span>?
+                Ready to Scale Your <span className="text-gradient-primary">Tech Team</span>?
               </h2>
               <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Let's discuss your needs and create something amazing together.
+                Let's discuss your technical hiring needs and create a customized talent acquisition strategy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Button className="btn-gradient-accent">
@@ -181,7 +187,7 @@ const Services = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Button variant="outline" className="glass-effect hover:bg-secondary/20">
-                  View Portfolio
+                  View Our Expertise
                 </Button>
               </div>
             </div>
