@@ -186,7 +186,7 @@ const Services = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Button className="btn-gradient-accent">
-                  Get Free Consultation
+                  Tech Hiring, Done Right — Let's Talk.
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Button variant="outline" className="glass-effect hover:bg-secondary/20">
