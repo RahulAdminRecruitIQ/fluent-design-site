@@ -1,4 +1,4 @@
-import { Users, Target, Award, TrendingUp } from 'lucide-react';
+import React from 'react';
 
 const AboutUs = () => {
   const stats = [
@@ -26,28 +26,6 @@ const AboutUs = () => {
     },
   ];
 
-  const values = [
-    {
-      icon: Target,
-      title: 'Innovation',
-      description: 'We constantly push boundaries to deliver cutting-edge solutions.',
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Together we achieve more through teamwork and shared vision.',
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for perfection in everything we create and deliver.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth',
-      description: 'Continuous improvement and learning drive our success.',
-    },
-  ];
 
   return (
     <div className="min-h-screen pt-24">
@@ -113,30 +91,26 @@ const AboutUs = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
-              Our <span className="text-gradient-accent">Core Values</span>
+              <span className="text-gradient-accent">Empowering Growth Through Purpose-Built Tech Talent Solutions</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
-              These principles guide everything we do and define who we are as a company.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div
-                  key={value.title}
-                  className="floating-card p-6 text-center group hover:scale-105 transition-all duration-500 animate-slide-up"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-xl mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-7 h-7 text-primary icon-float" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </div>
-              );
-            })}
+          <div className="max-w-4xl mx-auto">
+            <div className="floating-card p-8 md:p-12 animate-slide-up delay-200">
+              <div className="space-y-6 text-lg text-muted-foreground">
+                <p>
+                  At the core of our offering is a team of seasoned experts in workforce strategy, project delivery, and specialized tech recruitment. We're not just filling roles — we're building high-performing teams that drive innovation and long-term value.
+                </p>
+                
+                <p>
+                  As an independently funded, self-directed firm, we're uniquely positioned to craft agile, scalable, and fully customized hiring solutions — free from one-size-fits-all constraints. Whether you're a high-growth startup or an enterprise scaling engineering capacity, we align with your goals and deliver talent that fits not just the role, but your culture and pace.
+                </p>
+                
+                <p>
+                  With deep experience across software development, DevOps, data engineering, product, and emerging tech roles, our niche focus ensures faster, smarter hires. We help you stay ahead of the curve — and ahead of the competition.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
