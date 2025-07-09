@@ -50,10 +50,10 @@ const Partners = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
-            Our <span className="text-gradient-primary">Strategic Partners</span>
+            <span className="text-gradient-primary">Talent Delivery Partners</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-200">
-            We collaborate with industry-leading companies to deliver exceptional talent solutions and drive innovation across the tech ecosystem.
+            We collaborate with top-tier partners who enable seamless sourcing, vetting, and placement of high-performing tech talent across North America.
           </p>
         </div>
       </section>
