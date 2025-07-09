@@ -176,10 +176,13 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">
-                Ready to Scale Your <span className="text-gradient-primary">Tech Team</span>?
+                <span className="text-gradient-primary">We Help You Hire. You Focus on Building.</span>
               </h2>
-              <p className="text-muted-foreground mb-8 animate-slide-up delay-200">
-                Let's discuss your technical hiring needs and create a customized talent acquisition strategy.
+              <p className="text-muted-foreground mb-6 animate-slide-up delay-200">
+                Stop spending valuable time on lengthy recruitment processes. Our specialized team handles every aspect of technical hiring — from sourcing and screening to final placement — so you can concentrate on what you do best: creating innovative solutions.
+              </p>
+              <p className="text-muted-foreground/80 mb-8 animate-slide-up delay-300">
+                Whether you need a single senior engineer or an entire development team, we deliver pre-vetted, culture-fit candidates who are ready to contribute from day one.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
                 <Button className="btn-gradient-accent">
