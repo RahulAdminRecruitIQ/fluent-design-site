@@ -3,24 +3,27 @@ import { Button } from '@/components/ui/button';
 
 const Partners = () => {
   const partners = [
-    { name: 'Hexaware', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Hexaware_logo.svg/320px-Hexaware_logo.svg.png' },
-    { name: 'Persistent Systems', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Persistent_Systems_logo.svg/320px-Persistent_Systems_logo.svg.png' },
-    { name: 'JPMC', logo: 'https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png' },
-    { name: 'Bank of America', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Bank-of-America-Logo.png' },
-    { name: 'Brillio', logo: 'https://www.brillio.com/wp-content/uploads/2023/01/brillio-logo.svg' },
-    { name: 'Tech Mahindra', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tech_Mahindra_New_Logo.svg/320px-Tech_Mahindra_New_Logo.svg.png' },
-    { name: 'Capgemini', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Capgemini_201x_logo.svg/320px-Capgemini_201x_logo.svg.png' },
-    { name: 'AON', logo: 'https://logos-world.net/wp-content/uploads/2020/12/Aon-Logo.png' },
-    { name: 'Optum', logo: 'https://logos-world.net/wp-content/uploads/2021/02/Optum-Logo.png' },
+    // Corporate Partners
+    { name: 'Hexaware', logo: 'https://www.hexaware.com/wp-content/uploads/2023/01/hexaware-logo.svg' },
+    { name: 'Persistent Systems', logo: 'https://www.persistent.com/wp-content/uploads/2023/01/persistent-logo.svg' },
+    { name: 'JPMorgan Chase', logo: 'https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/images/logos/jpmc-logo-blue.svg' },
+    { name: 'Bank of America', logo: 'https://www.bankofamerica.com/content/dam/boaml/images/logos/boa-logo.svg' },
+    { name: 'Brillio', logo: 'https://www.brillio.com/wp-content/uploads/2023/01/brillio-logo-white.svg' },
+    { name: 'Tech Mahindra', logo: 'https://www.techmahindra.com/themes/tm/images/tm-logo.svg' },
+    { name: 'Capgemini', logo: 'https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/logo.svg' },
+    { name: 'Aon', logo: 'https://www.aon.com/getmedia/88b5a4d1-0b8f-4c4c-9b4a-8c8b8c8b8c8b/aon-logo.svg' },
+    { name: 'Optum', logo: 'https://www.optum.com/content/dam/optum/logos/optum-logo.svg' },
+    
+    // Government Clients
     { name: 'Texas HHSC', logo: 'https://www.hhs.texas.gov/sites/default/files/images/about-hhs/communications-events/hhs-logo-header.png' },
-    { name: 'State of Virginia', logo: 'https://www.virginia.gov/media/governorvirginiagov/images/featured/seal-of-virginia-reverse.png' },
-    { name: 'Virginia DOT', logo: 'https://www.virginiadot.org/info/resources/VDOT_logo_blue_300.png' },
-    { name: 'California DMV', logo: 'https://www.dmv.ca.gov/portal/wp-content/uploads/2020/06/dmvlogo.png' },
-    { name: 'Florida DOT', logo: 'https://www.fdot.gov/images/fdot-logo.png' },
-    { name: 'New York State', logo: 'https://www.ny.gov/sites/default/files/styles/medium/public/2021-05/NYS-Logo.png' },
-    { name: 'Illinois DHFS', logo: 'https://www2.illinois.gov/gov/PublishingImages/Illinois%20Logo.png' },
-    { name: 'Georgia DHS', logo: 'https://dhs.georgia.gov/sites/dhs.georgia.gov/files/styles/agency_featured/public/related_files/site_page/DHS-logo.png' },
-    { name: 'Ohio DOT', logo: 'https://www.transportation.ohio.gov/static/ODOT+Logo.png' },
+    { name: 'State of Virginia', logo: 'https://www.virginia.gov/media/governorvirginiagov/images/featured/seal-of-virginia.png' },
+    { name: 'Virginia DOT', logo: 'https://www.virginiadot.org/info/resources/VDOT_logo_blue.png' },
+    { name: 'California DMV', logo: 'https://www.dmv.ca.gov/portal/wp-content/uploads/2020/06/dmv-logo.png' },
+    { name: 'Florida DOT', logo: 'https://www.fdot.gov/images/fdot-logo-blue.png' },
+    { name: 'New York State', logo: 'https://www.ny.gov/sites/default/files/2021-05/NYS-Logo-blue.png' },
+    { name: 'Illinois DHFS', logo: 'https://www2.illinois.gov/gov/PublishingImages/Illinois-Logo-blue.png' },
+    { name: 'Georgia DHS', logo: 'https://dhs.georgia.gov/sites/dhs.georgia.gov/files/DHS-logo-blue.png' },
+    { name: 'Ohio DOT', logo: 'https://www.transportation.ohio.gov/static/ODOT-Logo-blue.png' },
   ];
 
   const benefits = [
