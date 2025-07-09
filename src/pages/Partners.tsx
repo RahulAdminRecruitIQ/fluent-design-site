@@ -6,94 +6,76 @@ const Partners = () => {
     // Corporate Partners
     { 
       name: 'Hexaware', 
-      logo: 'https://www.hexaware.com/wp-content/uploads/2021/04/hexaware-logo-white.png',
       type: 'corporate'
     },
     { 
       name: 'Persistent Systems', 
-      logo: 'https://www.persistent.com/wp-content/uploads/2021/03/persistent-logo-white.png',
       type: 'corporate'
     },
     { 
       name: 'JPMorgan Chase', 
-      logo: 'https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png',
       type: 'corporate'
     },
     { 
       name: 'Bank of America', 
-      logo: 'https://logos-world.net/wp-content/uploads/2020/04/Bank-of-America-Logo.png',
       type: 'corporate'
     },
     { 
       name: 'Brillio', 
-      logo: 'https://www.brillio.com/wp-content/uploads/2023/05/brillio-logo-white.svg',
       type: 'corporate'
     },
     { 
       name: 'Tech Mahindra', 
-      logo: 'https://logos-world.net/wp-content/uploads/2020/09/Tech-Mahindra-Logo.png',
       type: 'corporate'
     },
     { 
       name: 'Capgemini', 
-      logo: 'https://logos-world.net/wp-content/uploads/2020/09/Capgemini-Logo.png',
       type: 'corporate'
     },
     { 
       name: 'Aon', 
-      logo: 'https://logos-world.net/wp-content/uploads/2021/02/Aon-Logo.png',
       type: 'corporate'
     },
     { 
       name: 'Optum', 
-      logo: 'https://logos-world.net/wp-content/uploads/2021/02/Optum-Logo.png',
       type: 'corporate'
     },
     
     // Government Clients
     { 
       name: 'Texas HHSC', 
-      logo: 'https://www.hhs.texas.gov/sites/default/files/images/about-hhs/communications-events/hhs-logo-header.png',
       type: 'government'
     },
     { 
       name: 'State of Virginia', 
-      logo: 'https://www.virginia.gov/media/governorvirginiagov/images/featured/seal-of-virginia.png',
       type: 'government'
     },
     { 
       name: 'Virginia DOT', 
-      logo: 'https://www.virginiadot.org/info/resources/VDOT_logo_blue.png',
       type: 'government'
     },
     { 
       name: 'California DMV', 
-      logo: 'https://www.dmv.ca.gov/portal/wp-content/uploads/2020/06/dmv-logo.png',
       type: 'government'
     },
     { 
       name: 'Florida DOT', 
-      logo: 'https://www.fdot.gov/images/fdot-logo-blue.png',
       type: 'government'
     },
     { 
       name: 'New York State', 
-      logo: 'https://www.ny.gov/sites/default/files/2021-05/NYS-Logo-blue.png',
       type: 'government'
     },
     { 
       name: 'Illinois DHFS', 
-      logo: 'https://www2.illinois.gov/gov/PublishingImages/Illinois-Logo-blue.png',
       type: 'government'
     },
     { 
       name: 'Georgia DHS', 
-      logo: 'https://dhs.georgia.gov/sites/dhs.georgia.gov/files/DHS-logo-blue.png',
       type: 'government'
     },
     { 
       name: 'Ohio DOT', 
-      logo: 'https://www.transportation.ohio.gov/static/ODOT-Logo-blue.png',
       type: 'government'
     },
   ];
@@ -160,21 +142,16 @@ const Partners = () => {
               {partners.map((partner, index) => (
                 <div
                   key={`first-${partner.name}`}
-                  className="flex-shrink-0 floating-card p-6 text-center group hover:scale-105 transition-all duration-500 min-w-[200px]"
+                  className="flex-shrink-0 floating-card p-8 text-center group hover:scale-105 transition-all duration-500 min-w-[250px] h-32 flex flex-col justify-center"
                 >
-                  <div className="h-16 mb-3 flex items-center justify-center">
-                    <img 
-                      src={partner.logo} 
-                      alt={`${partner.name} logo`}
-                      className="max-h-12 max-w-32 object-contain opacity-70 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => {
-                        // Fallback to a placeholder if image fails to load
-                        e.currentTarget.src = `https://via.placeholder.com/120x40/3B82F6/FFFFFF?text=${partner.name.replace(/\s+/g, '+')}`;
-                      }}
-                    />
+                  <div className={`text-lg font-bold mb-2 whitespace-nowrap transition-colors group-hover:text-primary ${
+                    partner.type === 'government' 
+                      ? 'italic font-space text-accent' 
+                      : 'font-inter text-primary'
+                  }`}>
+                    {partner.name}
                   </div>
-                  <div className="text-sm font-medium whitespace-nowrap">{partner.name}</div>
-                  <div className="text-xs text-muted-foreground mt-1">
+                  <div className="text-xs text-muted-foreground">
                     {partner.type === 'government' ? 'Government' : 'Corporate'}
                   </div>
                 </div>
@@ -183,21 +160,16 @@ const Partners = () => {
               {partners.map((partner, index) => (
                 <div
                   key={`second-${partner.name}`}
-                  className="flex-shrink-0 floating-card p-6 text-center group hover:scale-105 transition-all duration-500 min-w-[200px]"
+                  className="flex-shrink-0 floating-card p-8 text-center group hover:scale-105 transition-all duration-500 min-w-[250px] h-32 flex flex-col justify-center"
                 >
-                  <div className="h-16 mb-3 flex items-center justify-center">
-                    <img 
-                      src={partner.logo} 
-                      alt={`${partner.name} logo`}
-                      className="max-h-12 max-w-32 object-contain opacity-70 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => {
-                        // Fallback to a placeholder if image fails to load
-                        e.currentTarget.src = `https://via.placeholder.com/120x40/3B82F6/FFFFFF?text=${partner.name.replace(/\s+/g, '+')}`;
-                      }}
-                    />
+                  <div className={`text-lg font-bold mb-2 whitespace-nowrap transition-colors group-hover:text-primary ${
+                    partner.type === 'government' 
+                      ? 'italic font-space text-accent' 
+                      : 'font-inter text-primary'
+                  }`}>
+                    {partner.name}
                   </div>
-                  <div className="text-sm font-medium whitespace-nowrap">{partner.name}</div>
-                  <div className="text-xs text-muted-foreground mt-1">
+                  <div className="text-xs text-muted-foreground">
                     {partner.type === 'government' ? 'Government' : 'Corporate'}
                   </div>
                 </div>
