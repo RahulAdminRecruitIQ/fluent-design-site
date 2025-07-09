@@ -4,26 +4,98 @@ import { Button } from '@/components/ui/button';
 const Partners = () => {
   const partners = [
     // Corporate Partners
-    { name: 'Hexaware', logo: 'https://www.hexaware.com/wp-content/uploads/2023/01/hexaware-logo.svg' },
-    { name: 'Persistent Systems', logo: 'https://www.persistent.com/wp-content/uploads/2023/01/persistent-logo.svg' },
-    { name: 'JPMorgan Chase', logo: 'https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/images/logos/jpmc-logo-blue.svg' },
-    { name: 'Bank of America', logo: 'https://www.bankofamerica.com/content/dam/boaml/images/logos/boa-logo.svg' },
-    { name: 'Brillio', logo: 'https://www.brillio.com/wp-content/uploads/2023/01/brillio-logo-white.svg' },
-    { name: 'Tech Mahindra', logo: 'https://www.techmahindra.com/themes/tm/images/tm-logo.svg' },
-    { name: 'Capgemini', logo: 'https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/logo.svg' },
-    { name: 'Aon', logo: 'https://www.aon.com/getmedia/88b5a4d1-0b8f-4c4c-9b4a-8c8b8c8b8c8b/aon-logo.svg' },
-    { name: 'Optum', logo: 'https://www.optum.com/content/dam/optum/logos/optum-logo.svg' },
+    { 
+      name: 'Hexaware', 
+      logo: 'https://www.hexaware.com/wp-content/uploads/2021/04/hexaware-logo-white.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'Persistent Systems', 
+      logo: 'https://www.persistent.com/wp-content/uploads/2021/03/persistent-logo-white.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'JPMorgan Chase', 
+      logo: 'https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'Bank of America', 
+      logo: 'https://logos-world.net/wp-content/uploads/2020/04/Bank-of-America-Logo.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'Brillio', 
+      logo: 'https://www.brillio.com/wp-content/uploads/2023/05/brillio-logo-white.svg',
+      type: 'corporate'
+    },
+    { 
+      name: 'Tech Mahindra', 
+      logo: 'https://logos-world.net/wp-content/uploads/2020/09/Tech-Mahindra-Logo.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'Capgemini', 
+      logo: 'https://logos-world.net/wp-content/uploads/2020/09/Capgemini-Logo.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'Aon', 
+      logo: 'https://logos-world.net/wp-content/uploads/2021/02/Aon-Logo.png',
+      type: 'corporate'
+    },
+    { 
+      name: 'Optum', 
+      logo: 'https://logos-world.net/wp-content/uploads/2021/02/Optum-Logo.png',
+      type: 'corporate'
+    },
     
     // Government Clients
-    { name: 'Texas HHSC', logo: 'https://www.hhs.texas.gov/sites/default/files/images/about-hhs/communications-events/hhs-logo-header.png' },
-    { name: 'State of Virginia', logo: 'https://www.virginia.gov/media/governorvirginiagov/images/featured/seal-of-virginia.png' },
-    { name: 'Virginia DOT', logo: 'https://www.virginiadot.org/info/resources/VDOT_logo_blue.png' },
-    { name: 'California DMV', logo: 'https://www.dmv.ca.gov/portal/wp-content/uploads/2020/06/dmv-logo.png' },
-    { name: 'Florida DOT', logo: 'https://www.fdot.gov/images/fdot-logo-blue.png' },
-    { name: 'New York State', logo: 'https://www.ny.gov/sites/default/files/2021-05/NYS-Logo-blue.png' },
-    { name: 'Illinois DHFS', logo: 'https://www2.illinois.gov/gov/PublishingImages/Illinois-Logo-blue.png' },
-    { name: 'Georgia DHS', logo: 'https://dhs.georgia.gov/sites/dhs.georgia.gov/files/DHS-logo-blue.png' },
-    { name: 'Ohio DOT', logo: 'https://www.transportation.ohio.gov/static/ODOT-Logo-blue.png' },
+    { 
+      name: 'Texas HHSC', 
+      logo: 'https://www.hhs.texas.gov/sites/default/files/images/about-hhs/communications-events/hhs-logo-header.png',
+      type: 'government'
+    },
+    { 
+      name: 'State of Virginia', 
+      logo: 'https://www.virginia.gov/media/governorvirginiagov/images/featured/seal-of-virginia.png',
+      type: 'government'
+    },
+    { 
+      name: 'Virginia DOT', 
+      logo: 'https://www.virginiadot.org/info/resources/VDOT_logo_blue.png',
+      type: 'government'
+    },
+    { 
+      name: 'California DMV', 
+      logo: 'https://www.dmv.ca.gov/portal/wp-content/uploads/2020/06/dmv-logo.png',
+      type: 'government'
+    },
+    { 
+      name: 'Florida DOT', 
+      logo: 'https://www.fdot.gov/images/fdot-logo-blue.png',
+      type: 'government'
+    },
+    { 
+      name: 'New York State', 
+      logo: 'https://www.ny.gov/sites/default/files/2021-05/NYS-Logo-blue.png',
+      type: 'government'
+    },
+    { 
+      name: 'Illinois DHFS', 
+      logo: 'https://www2.illinois.gov/gov/PublishingImages/Illinois-Logo-blue.png',
+      type: 'government'
+    },
+    { 
+      name: 'Georgia DHS', 
+      logo: 'https://dhs.georgia.gov/sites/dhs.georgia.gov/files/DHS-logo-blue.png',
+      type: 'government'
+    },
+    { 
+      name: 'Ohio DOT', 
+      logo: 'https://www.transportation.ohio.gov/static/ODOT-Logo-blue.png',
+      type: 'government'
+    },
   ];
 
   const benefits = [
@@ -94,10 +166,17 @@ const Partners = () => {
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} logo`}
-                      className="max-h-12 max-w-32 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                      className="max-h-12 max-w-32 object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => {
+                        // Fallback to a placeholder if image fails to load
+                        e.currentTarget.src = `https://via.placeholder.com/120x40/3B82F6/FFFFFF?text=${partner.name.replace(/\s+/g, '+')}`;
+                      }}
                     />
                   </div>
                   <div className="text-sm font-medium whitespace-nowrap">{partner.name}</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {partner.type === 'government' ? 'Government' : 'Corporate'}
+                  </div>
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
@@ -110,10 +189,17 @@ const Partners = () => {
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} logo`}
-                      className="max-h-12 max-w-32 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                      className="max-h-12 max-w-32 object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => {
+                        // Fallback to a placeholder if image fails to load
+                        e.currentTarget.src = `https://via.placeholder.com/120x40/3B82F6/FFFFFF?text=${partner.name.replace(/\s+/g, '+')}`;
+                      }}
                     />
                   </div>
                   <div className="text-sm font-medium whitespace-nowrap">{partner.name}</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {partner.type === 'government' ? 'Government' : 'Corporate'}
+                  </div>
                 </div>
               ))}
             </div>
