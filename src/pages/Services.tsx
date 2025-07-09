@@ -188,9 +188,11 @@ const Services = () => {
                 Whether you need a single senior engineer or an entire development team, we deliver pre-vetted, culture-fit candidates who are ready to contribute from day one.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
-                <Button className="btn-gradient-accent">
-                  Tech Hiring, Done Right — Let's Talk.
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button asChild className="btn-gradient-accent">
+                  <Link to="/contact">
+                    Tech Hiring, Done Right — Let's Talk.
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </Button>
                 <Button variant="outline" className="glass-effect hover:bg-secondary/20">
                   View Our Expertise
