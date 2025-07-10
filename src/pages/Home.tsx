@@ -57,22 +57,29 @@ const Home = () => {
           <div className="absolute bottom-20 left-1/2 w-24 h-24 bg-primary/30 rounded-full blur-xl animate-pulse delay-500" />
 
           <div className="relative z-10">
-            <div className="inline-flex items-center space-x-2 floating-card px-4 py-2 mb-8 animate-slide-up">
+            {/* Company Name with Animation */}
+            <div className="mb-4 animate-fade-in">
+              <h2 className="font-cursive text-4xl md:text-6xl text-gradient-primary font-semibold animate-slide-up">
+                RecruitIQ
+              </h2>
+            </div>
+            
+            <div className="inline-flex items-center space-x-2 floating-card px-4 py-2 mb-8 animate-slide-up delay-200">
               <Star className="w-4 h-4 text-primary icon-pulse" />
               <span className="text-sm font-medium">America's Premier Tech Talent Partner</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up delay-200">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up delay-300">
               <span className="text-gradient-primary">Connecting</span>
               <br />
               Tech Talent with Innovation
             </h1>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up delay-300">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up delay-400">
               We bridge the gap between exceptional tech professionals and forward-thinking companies across the United States.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-400">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-500">
               <Button onClick={handleFindTalent} className="btn-gradient-primary group">
                 Find Talent
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
