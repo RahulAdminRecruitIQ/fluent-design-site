@@ -40,10 +40,10 @@ const AboutUs = () => {
               </h2>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200 font-cursive">
               About <span className="text-gradient-primary">Our Story</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300 font-cursive">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
               We are a passionate team dedicated to creating innovative solutions that transform businesses and drive success in the digital age.
             </p>
           </div>
@@ -129,7 +129,7 @@ const AboutUs = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Meet Our <span className="text-gradient-primary">Leadership Team</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
               Experienced professionals leading innovation and driving success.
             </p>
           </div>

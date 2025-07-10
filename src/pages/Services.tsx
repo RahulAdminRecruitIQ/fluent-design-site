@@ -81,10 +81,10 @@ const Services = () => {
             </h2>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200 font-cursive">
             Our <span className="text-gradient-primary">Services</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300 font-cursive">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
             Comprehensive tech talent solutions designed to accelerate your engineering capabilities and drive innovation across your organization.
           </p>
         </div>
@@ -151,7 +151,7 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Our <span className="text-gradient-accent">Hiring Process</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
               A proven methodology that ensures we deliver the right technical talent for your organization.
             </p>
           </div>
