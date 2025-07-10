@@ -115,10 +115,17 @@ const Partners = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
+          {/* Company Name with Animation */}
+          <div className="mb-4 animate-fade-in">
+            <h2 className="font-cursive text-4xl md:text-6xl text-gradient-primary font-semibold animate-slide-up">
+              RecruitIQ
+            </h2>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
             <span className="text-gradient-primary">Talent Delivery Partners</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-200">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
             We collaborate with top-tier partners who enable seamless sourcing, vetting, and placement of high-performing tech talent across North America.
           </p>
         </div>

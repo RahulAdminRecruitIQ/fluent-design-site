@@ -33,10 +33,17 @@ const AboutUs = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
+            {/* Company Name with Animation */}
+            <div className="mb-4 animate-fade-in">
+              <h2 className="font-cursive text-4xl md:text-6xl text-gradient-primary font-semibold animate-slide-up">
+                RecruitIQ
+              </h2>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
               About <span className="text-gradient-primary">Our Story</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-200">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
               We are a passionate team dedicated to creating innovative solutions that transform businesses and drive success in the digital age.
             </p>
           </div>

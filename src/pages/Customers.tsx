@@ -88,10 +88,17 @@ const Customers = () => {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
+          {/* Company Name with Animation */}
+          <div className="mb-4 animate-fade-in">
+            <h2 className="font-cursive text-4xl md:text-6xl text-gradient-primary font-semibold animate-slide-up">
+              RecruitIQ
+            </h2>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
             Our <span className="text-gradient-primary">Success Stories</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-200">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
             Discover how we've helped businesses transform their digital presence and achieve remarkable growth.
           </p>
         </div>
