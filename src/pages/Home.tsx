@@ -66,7 +66,7 @@ const Home = () => {
             
             <div className="inline-flex items-center space-x-2 floating-card px-4 py-2 mb-8 animate-slide-up delay-200">
               <Star className="w-4 h-4 text-primary icon-pulse" />
-              <span className="text-sm font-medium">America's Premier Tech Talent Partner</span>
+              <span className="text-sm font-medium font-cursive">America's Premier Tech Talent Partner</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up delay-300">
@@ -75,7 +75,7 @@ const Home = () => {
               Tech Talent with Innovation
             </h1>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up delay-400">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up delay-400 font-cursive">
               We bridge the gap between exceptional tech professionals and forward-thinking companies across the United States.
             </p>
 
@@ -119,7 +119,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Why Choose <span className="text-gradient-accent">The RecruitIQ</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
               Your trusted partner in building high-performing tech teams with America's finest talent.
             </p>
           </div>

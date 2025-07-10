@@ -125,7 +125,7 @@ const Partners = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
             <span className="text-gradient-primary">Talent Delivery Partners</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300 font-cursive">
             We collaborate with top-tier partners who enable seamless sourcing, vetting, and placement of high-performing tech talent across North America.
           </p>
         </div>
@@ -213,7 +213,7 @@ const Partners = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Partnership <span className="text-gradient-accent">Benefits</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
               Discover the advantages of partnering with The RecruitIQ and our extensive network.
             </p>
           </div>
@@ -246,7 +246,7 @@ const Partners = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Partnership <span className="text-gradient-primary">Models</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
               Flexible partnership options designed to meet your unique business needs.
             </p>
           </div>

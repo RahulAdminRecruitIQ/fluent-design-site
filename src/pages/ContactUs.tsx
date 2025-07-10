@@ -120,7 +120,7 @@ const ContactUs = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
             Get in <span className="text-gradient-primary">Touch</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300 font-cursive">
             Connect with America's premier tech talent network. We're here to help you find the perfect tech professionals for your team.
           </p>
         </div>
@@ -158,7 +158,7 @@ const ContactUs = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               Our <span className="text-gradient-primary">Key Locations</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
               Strategically positioned across major US tech hubs to serve you better and connect with top talent in key markets.
             </p>
           </div>

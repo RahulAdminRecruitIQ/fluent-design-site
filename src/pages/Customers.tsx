@@ -98,7 +98,7 @@ const Customers = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up delay-200">
             Our <span className="text-gradient-primary">Success Stories</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up delay-300 font-cursive">
             Discover how we've helped businesses transform their digital presence and achieve remarkable growth.
           </p>
         </div>
@@ -135,7 +135,7 @@ const Customers = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               What Our <span className="text-gradient-accent">Clients Say</span>
             </h2>
-            <p className="text-muted-foreground animate-slide-up delay-200">
+            <p className="text-muted-foreground animate-slide-up delay-200 font-cursive">
               Real feedback from real customers who have experienced our services.
             </p>
           </div>
@@ -217,7 +217,7 @@ const Customers = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-slide-up">
               <span className="text-gradient-primary">Case Studies</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200">
+            <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up delay-200 font-cursive">
               Detailed looks at how we've solved complex challenges for our clients.
             </p>
           </div>
