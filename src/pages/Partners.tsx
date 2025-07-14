@@ -1,5 +1,6 @@
 import { Building2, Handshake, TrendingUp, Users, Globe, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Partners = () => {
   const partners = [
@@ -274,9 +275,11 @@ const Partners = () => {
                 Join our network of industry leaders and unlock access to top-tier tech talent.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
-                <Button className="btn-gradient-accent">
-                  Become a Partner
-                </Button>
+                <Link to="/contact">
+                  <Button className="btn-gradient-accent">
+                    Become a Partner
+                  </Button>
+                </Link>
                 <Button variant="outline" className="glass-effect hover:bg-secondary/20">
                   Learn More
                 </Button>
