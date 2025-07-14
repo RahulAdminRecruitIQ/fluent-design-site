@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import Partners from "./pages/Partners";
 import Customers from "./pages/Customers";
 import ContactUs from "./pages/ContactUs";
+import TalentPool from "./pages/TalentPool";
 import NotFound from "./pages/NotFound";
 import FloatingNavbar from "./components/FloatingNavbar";
 import Footer from '@/components/Footer';
@@ -30,6 +31,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/customers" element={<Customers />} />
+              <Route path="/talent" element={<TalentPool />} />
               <Route path="/contact" element={<ContactUs />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

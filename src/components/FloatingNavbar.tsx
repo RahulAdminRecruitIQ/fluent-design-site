@@ -12,7 +12,7 @@ const FloatingNavbar = () => {
     { name: 'About Us', path: '/about', icon: Users },
     { name: 'Services', path: '/services', icon: Briefcase },
     { name: 'Partners', path: '/partners', icon: Handshake },
-    { name: 'Talent Pool', path: '/customers', icon: Star },
+    { name: 'Talent Pool', path: '/talent', icon: Star },
     { name: 'Contact Us', path: '/contact', icon: Mail },
   ];
 
