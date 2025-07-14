@@ -109,16 +109,18 @@ const Partners = () => {
                   key={`first-${partner.name}`}
                   className="flex-shrink-0 floating-card p-8 text-center group hover:scale-105 transition-all duration-500 min-w-[250px] h-32 flex flex-col justify-center"
                 >
-                  <div className={`text-lg font-bold mb-2 whitespace-nowrap transition-colors group-hover:text-primary ${
+                  <div className={`text-lg font-bold mb-2 whitespace-nowrap transition-colors group-hover:text-primary font-cursive ${
                     partner.type === 'government' 
                       ? 'italic font-space text-accent' 
-                      : 'font-inter text-primary'
+                      : 'text-primary'
                   }`}>
                     {partner.name}
                   </div>
-                  <div className="text-xs text-muted-foreground">
-                    {partner.type === 'government' ? 'Government' : 'Corporate'}
-                  </div>
+                  {partner.type === 'government' && (
+                    <div className="text-xs text-muted-foreground">
+                      Government
+                    </div>
+                  )}
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
@@ -127,16 +129,18 @@ const Partners = () => {
                   key={`second-${partner.name}`}
                   className="flex-shrink-0 floating-card p-8 text-center group hover:scale-105 transition-all duration-500 min-w-[250px] h-32 flex flex-col justify-center"
                 >
-                  <div className={`text-lg font-bold mb-2 whitespace-nowrap transition-colors group-hover:text-primary ${
+                  <div className={`text-lg font-bold mb-2 whitespace-nowrap transition-colors group-hover:text-primary font-cursive ${
                     partner.type === 'government' 
                       ? 'italic font-space text-accent' 
-                      : 'font-inter text-primary'
+                      : 'text-primary'
                   }`}>
                     {partner.name}
                   </div>
-                  <div className="text-xs text-muted-foreground">
-                    {partner.type === 'government' ? 'Government' : 'Corporate'}
-                  </div>
+                  {partner.type === 'government' && (
+                    <div className="text-xs text-muted-foreground">
+                      Government
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
