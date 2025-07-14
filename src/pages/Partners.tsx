@@ -3,79 +3,37 @@ import { Button } from '@/components/ui/button';
 
 const Partners = () => {
   const partners = [
-    // Corporate Partners
+    // Industry Categories
     { 
-      name: 'Hexaware', 
+      name: 'Service Implementation (SI)', 
       type: 'corporate'
     },
     { 
-      name: 'Persistent Systems', 
+      name: 'Manufacturing Clients', 
       type: 'corporate'
     },
     { 
-      name: 'JPMorgan Chase', 
+      name: 'Insurance Clients', 
       type: 'corporate'
     },
     { 
-      name: 'Bank of America', 
+      name: 'Health & Welfare (HRO) Clients', 
       type: 'corporate'
     },
     { 
-      name: 'Brillio', 
+      name: 'Financial Clients', 
       type: 'corporate'
     },
     { 
-      name: 'Tech Mahindra', 
+      name: 'Automotive Clients', 
       type: 'corporate'
     },
     { 
-      name: 'Capgemini', 
+      name: 'Engineering Clients', 
       type: 'corporate'
     },
     { 
-      name: 'Aon', 
-      type: 'corporate'
-    },
-    { 
-      name: 'Optum', 
-      type: 'corporate'
-    },
-    
-    // Government Clients
-    { 
-      name: 'Texas HHSC', 
-      type: 'government'
-    },
-    { 
-      name: 'State of Virginia', 
-      type: 'government'
-    },
-    { 
-      name: 'Virginia DOT', 
-      type: 'government'
-    },
-    { 
-      name: 'California DMV', 
-      type: 'government'
-    },
-    { 
-      name: 'Florida DOT', 
-      type: 'government'
-    },
-    { 
-      name: 'New York State', 
-      type: 'government'
-    },
-    { 
-      name: 'Illinois DHFS', 
-      type: 'government'
-    },
-    { 
-      name: 'Georgia DHS', 
-      type: 'government'
-    },
-    { 
-      name: 'Ohio DOT', 
+      name: 'US Government & Federal Customers', 
       type: 'government'
     },
   ];
