@@ -65,7 +65,7 @@ const Partners = () => {
     { number: '50+', label: 'Strategic Partners' },
     { number: '10K+', label: 'Professionals Placed' },
     { number: '95%', label: 'Partner Satisfaction' },
-    { number: '24/7', label: 'Global Support' },
+    { number: '100%', label: 'Highly Talented Technical Recruitment Team' },
   ];
 
   return (
