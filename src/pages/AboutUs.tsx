@@ -11,7 +11,7 @@ const AboutUs = () => {
   const team = [
     {
       name: 'Wasim',
-      role: 'CEO & Founder',
+      role: 'Head of Accounts & Finance',
       image: '/Pic/Wasim .webp',
     },
     {
