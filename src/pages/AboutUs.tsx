@@ -4,7 +4,7 @@ const AboutUs = () => {
   const stats = [
     { number: '500+', label: 'Happy Candidates Placed' },
     { number: '98%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' },
+    { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with “Seamless Communication. Real-Time Updates.”' },
     { number: '5+', label: 'Years Experience' },
   ];
 
