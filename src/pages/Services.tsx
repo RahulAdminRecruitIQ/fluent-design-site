@@ -1,6 +1,11 @@
-import { Users, Search, Target, Cog, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import { Users, Search, Target, Cog, TrendingUp, ArrowRight, CheckCircle, UserCheck, UserPlus, Clock, Crown, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import techRecruitmentImg from '@/assets/tech-recruitment.jpg';
+import staffAugmentationImg from '@/assets/staff-augmentation.jpg';
+import contractHiringImg from '@/assets/contract-hiring.jpg';
+import permanentPlacementImg from '@/assets/permanent-placement.jpg';
+import executiveSearchImg from '@/assets/executive-search.jpg';
 
 const Services = () => {
   const services = [
@@ -43,6 +48,46 @@ const Services = () => {
       features: ['Workforce Planning & Analytics', 'Contractor Management', 'Skills Gap Analysis', 'Talent Pipeline Development'],
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
       details: 'We help you optimize your technical workforce through strategic planning, analytics, and comprehensive management of both permanent and contract resources.',
+    },
+    {
+      icon: UserCheck,
+      title: 'Tech Recruitment',
+      description: 'Specialized technical recruitment services focusing on top-tier technology professionals.',
+      features: ['Full Stack Developers', 'DevOps Engineers', 'Data Scientists', 'Software Architects'],
+      image: techRecruitmentImg,
+      details: 'Our tech recruitment specialists understand the unique requirements of technical roles and can quickly identify candidates with the right skill sets and cultural fit.',
+    },
+    {
+      icon: UserPlus,
+      title: 'Staff Augmentation',
+      description: 'Quickly scale your technical teams with skilled professionals who integrate seamlessly.',
+      features: ['Rapid Team Scaling', 'Skilled Technical Professionals', 'Flexible Engagement Models', 'Project-based Support'],
+      image: staffAugmentationImg,
+      details: 'Our staff augmentation services help you rapidly expand your technical capabilities with pre-vetted professionals who can contribute immediately.',
+    },
+    {
+      icon: Clock,
+      title: 'Contract Hiring',
+      description: 'Flexible contract staffing solutions for short-term projects and specialized technical needs.',
+      features: ['Project-based Hiring', 'Short-term Specialists', 'Flexible Contracts', 'Rapid Deployment'],
+      image: contractHiringImg,
+      details: 'Perfect for project-based work or specialized technical requirements, our contract hiring services provide flexible staffing solutions.',
+    },
+    {
+      icon: Settings,
+      title: 'Permanent Placement',
+      description: 'Long-term hiring solutions for building your core technical team with full-time professionals.',
+      features: ['Full-time Technical Staff', 'Cultural Fit Assessment', 'Long-term Career Growth', 'Comprehensive Benefits'],
+      image: permanentPlacementImg,
+      details: 'Build your core technical team with permanent placements that align with your company culture and long-term strategic goals.',
+    },
+    {
+      icon: Crown,
+      title: 'Executive Search',
+      description: 'High-level executive recruitment for technical leadership positions and C-suite roles.',
+      features: ['C-suite Technology Leaders', 'VP of Engineering', 'CTO & Technical Directors', 'Senior Technical Managers'],
+      image: executiveSearchImg,
+      details: 'Our executive search practice specializes in finding exceptional technical leaders who can drive innovation and scale engineering organizations.',
     },
   ];
 
