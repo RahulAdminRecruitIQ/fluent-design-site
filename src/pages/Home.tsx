@@ -60,7 +60,7 @@ const Home = () => {
             {/* Company Name with Animation */}
             <div className="mb-4 animate-fade-in">
               <h2 className="font-cursive text-4xl md:text-6xl text-gradient-primary font-semibold animate-slide-up">
-                RecruitIQ
+                The RecruitIQ
               </h2>
             </div>
             
