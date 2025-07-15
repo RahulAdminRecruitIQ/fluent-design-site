@@ -5,7 +5,7 @@ const AboutUs = () => {
     { number: '500+', label: 'Happy Candidates Placed' },
     { number: '98%', label: 'Success Rate' },
     { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with “Seamless Communication. Real-Time Updates.”' },
-    { number: '5+', label: '“Professionals with deep, real-world experience — 5+ years across core technologies” with “Seasoned professionals with a minimum of five years’ industry experience”' },
+    { number: '5+', label: '“Professionals with deep, real-world experience — 5+ years across core technologies”' },
   ];
 
   const team = [
