@@ -10,7 +10,7 @@ const AboutUs = () => {
 
   const team = [
     {
-      name: 'Sarah Johnson',
+      name: 'Ms. Markende',
       role: 'CEO & Founder',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b647?w=300&h=300&fit=crop&crop=face',
     },
