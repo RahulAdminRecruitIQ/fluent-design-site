@@ -53,6 +53,7 @@ const Services = () => {
       icon: UserCheck,
       title: 'Tech Recruitment',
       description: 'Specialized technical recruitment services focusing on top-tier technology professionals.',
+      id: 'tech-recruitment',
       features: ['Full Stack Developers', 'DevOps Engineers', 'Data Scientists', 'Software Architects'],
       image: techRecruitmentImg,
       details: 'Our tech recruitment specialists understand the unique requirements of technical roles and can quickly identify candidates with the right skill sets and cultural fit.',
@@ -61,6 +62,7 @@ const Services = () => {
       icon: UserPlus,
       title: 'Staff Augmentation',
       description: 'Quickly scale your technical teams with skilled professionals who integrate seamlessly.',
+      id: 'staff-augmentation',
       features: ['Rapid Team Scaling', 'Skilled Technical Professionals', 'Flexible Engagement Models', 'Project-based Support'],
       image: staffAugmentationImg,
       details: 'Our staff augmentation services help you rapidly expand your technical capabilities with pre-vetted professionals who can contribute immediately.',
@@ -69,6 +71,7 @@ const Services = () => {
       icon: Clock,
       title: 'Contract Hiring',
       description: 'Flexible contract staffing solutions for short-term projects and specialized technical needs.',
+      id: 'contract-hiring',
       features: ['Project-based Hiring', 'Short-term Specialists', 'Flexible Contracts', 'Rapid Deployment'],
       image: contractHiringImg,
       details: 'Perfect for project-based work or specialized technical requirements, our contract hiring services provide flexible staffing solutions.',
@@ -77,6 +80,7 @@ const Services = () => {
       icon: Settings,
       title: 'Permanent Placement',
       description: 'Long-term hiring solutions for building your core technical team with full-time professionals.',
+      id: 'permanent-placement',
       features: ['Full-time Technical Staff', 'Cultural Fit Assessment', 'Long-term Career Growth', 'Comprehensive Benefits'],
       image: permanentPlacementImg,
       details: 'Build your core technical team with permanent placements that align with your company culture and long-term strategic goals.',
@@ -85,6 +89,7 @@ const Services = () => {
       icon: Crown,
       title: 'Executive Search',
       description: 'High-level executive recruitment for technical leadership positions and C-suite roles.',
+      id: 'executive-search',
       features: ['C-suite Technology Leaders', 'VP of Engineering', 'CTO & Technical Directors', 'Senior Technical Managers'],
       image: executiveSearchImg,
       details: 'Our executive search practice specializes in finding exceptional technical leaders who can drive innovation and scale engineering organizations.',
@@ -144,8 +149,9 @@ const Services = () => {
               return (
                 <div
                   key={service.title}
-                  className="floating-card group hover:scale-105 transition-all duration-500 animate-slide-up overflow-hidden"
+                  className="floating-card group hover:scale-105 transition-all duration-500 animate-slide-up overflow-hidden scroll-mt-24"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  id={service.id}
                 >
                   <div className="relative h-64 mb-6">
                     <img

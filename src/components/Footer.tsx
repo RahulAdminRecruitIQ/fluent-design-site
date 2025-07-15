@@ -12,11 +12,11 @@ const Footer = () => {
   ];
 
   const services = [
-    'Tech Recruitment',
-    'Staff Augmentation',
-    'Contract Hiring',
-    'Permanent Placement',
-    'Executive Search',
+    { name: 'Tech Recruitment', path: '/services#tech-recruitment' },
+    { name: 'Staff Augmentation', path: '/services#staff-augmentation' },
+    { name: 'Contract Hiring', path: '/services#contract-hiring' },
+    { name: 'Permanent Placement', path: '/services#permanent-placement' },
+    { name: 'Executive Search', path: '/services#executive-search' },
   ];
 
   const socialLinks = [
@@ -85,10 +85,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-red-400">Our Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="text-muted-foreground text-sm hover:text-orange-400 transition-colors cursor-pointer">
-                    {service}
-                  </span>
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-muted-foreground text-sm hover:text-orange-400 transition-colors animated-underline"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
