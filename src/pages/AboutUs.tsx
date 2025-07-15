@@ -10,40 +10,31 @@ const AboutUs = () => {
 
   const team = [
     {
-      name: 'Ms. Markende',
+      name: 'Wasim',
       role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b647?w=300&h=300&fit=crop&crop=face',
+      image: '/Pic/Wasim .webp',
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
+      name: 'Sarah J.',
+      role: 'VP of Operations',
+      image: '/Pic/Sarah.J.webp',
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
+      name: 'Thomas Minacale',
+      role: 'Head of Talent Acquisition',
+      image: '/Pic/Thomas Minacale.webp',
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
+      name: 'Carol Frugman',
+      role: 'Director of Client Relations',
+      image: '/Pic/Carol Frugman.webp',
     },
 
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
+      name: 'Linda Jackson Jr.',
+      role: 'Senior Recruitment Specialist',
+      image: '/Pic/Linda Jackson Jr..webp',
     },
-
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
-    },
-
-  
-    
   ];
 
 
