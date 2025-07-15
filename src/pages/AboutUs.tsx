@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   const stats = [
-    { number: '500+', label: 'Happy Clients' },
+    { number: '500+', label: 'Happy Candidates Placed' },
     { number: '98%', label: 'Success Rate' },
     { number: '24/7', label: 'Support' },
     { number: '5+', label: 'Years Experience' },
