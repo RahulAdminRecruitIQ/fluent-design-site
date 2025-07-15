@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   const stats = [
-    { number: '500+', label: 'Happy Candidates Placed' },
+    { number: '500+', label: '“Trusted by hundreds of professionals who’ve found the right fit” },
     { number: '98%', label: '“Trusted to deliver — with one of the highest success           rates in the industry”with “Proven track record of successful placements and         client satisfaction”' },
     { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with “Seamless Communication. Real-Time Updates.”' },
     { number: '5+', label: '“Professionals with deep, real-world experience — 5+ years across core technologies”' },
