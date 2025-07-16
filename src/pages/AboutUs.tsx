@@ -35,6 +35,11 @@ const AboutUs = () => {
       role: 'Senior Recruitment Specialist',
       image: '/Pic/Linda Jackson Jr..webp',
     },
+     {
+      name: 'Ms. Markende',
+      role: 'Founder & CPO',
+      image: '/Pic/ms Markende.jpg',
+    },
   ];
 
 
