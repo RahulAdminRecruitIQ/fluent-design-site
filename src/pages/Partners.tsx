@@ -6,35 +6,35 @@ const Partners = () => {
   const partners = [
     // Industry Categories
     { 
-      name: 'Service Implementation (SI)', 
+      name: 'Service Implementation Partners (SI)', 
       
     },
     { 
-      name: 'Manufacturing Clients', 
+      name: 'Manufacturing Partners', 
       
     },
     { 
-      name: 'Insurance Clients', 
+      name: 'Insurance Partners', 
       
     },
     { 
-      name: 'Health & Welfare (HRO) Clients', 
+      name: 'Health & Welfare (HRO) Partners', 
       
     },
     { 
-      name: 'Financial Clients', 
+      name: 'Financial Partners', 
       
     },
     { 
-      name: 'Automotive Clients', 
+      name: 'Automotive Partners', 
       
     },
     { 
-      name: 'Engineering Clients', 
+      name: 'Engineering Partners', 
       
     },
     { 
-      name: 'US Government & Federal Customers', 
+      name: 'US Government & Federal Partners', 
       
     },
   ];
