@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutUs = () => {
   const stats = [
-    { number: '500+', label: '“Trusted by hundreds of professionals who’ve found the right fit”. “We’ve helped 500+ professionals land roles that fit, grow, and inspire. Our approach goes beyond placement — it’s about long-term success.”' },
+    { number: '100+', label: '“Trusted by hundreds of professionals who’ve found the right fit”. “We’ve helped 100+ professionals land roles that fit, grow, and inspire. Our approach goes beyond placement — it’s about long-term success.”' },
     { number: '98%', label: '“Trusted to deliver — with one of the highest success           rates in the industry”with “Proven track record of successful placements and         client satisfaction”' },
     { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with “Seamless Communication. Real-Time Updates.”' },
-    { number: '5+', label: '“Professionals with deep, real-world experience — 5+ years across core technologies”' },
+    { number: '50+', label: '“We’ve successfully placed top-tier candidates across the U.S., spanning over 50 in-demand skill sets — helping our clients build high-performing teams with confidence and speed."' },
   ];
 
   const team = [
