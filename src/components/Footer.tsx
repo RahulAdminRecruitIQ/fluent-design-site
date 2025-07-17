@@ -143,15 +143,7 @@ const Footer = () => {
               © 2025 The RecruitIQ. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="#" className="text-muted-foreground hover:text-orange-400 transition-colors animated-underline">
-                Privacy Policy
-              </Link>
-              <Link to="#" className="text-muted-foreground hover:text-red-400 transition-colors animated-underline">
-                Terms of Service
-              </Link>
-              <Link to="#" className="text-muted-foreground hover:text-orange-400 transition-colors animated-underline">
-                Cookie Policy
-              </Link>
+              
             </div>
           </div>
         </div>
