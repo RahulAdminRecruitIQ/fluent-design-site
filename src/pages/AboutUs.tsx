@@ -21,7 +21,7 @@ const AboutUs = () => {
       role: 'Senior Recruitment Specialist',
       image: '/Pic/Linda Jackson Jr..webp',
     },
-      
+
     
       
   ];
