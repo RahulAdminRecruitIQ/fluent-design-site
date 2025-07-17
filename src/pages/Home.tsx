@@ -25,8 +25,8 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '100+', label: 'Elite Tech Professionals - Curated network of senior developers, architects, and engineering leaders across full-stack, cloud, AI/ML, and emerging technologies.' },
-    { number: '50+', label: 'Fortune Tech Giants Partnerships - Trusted by industry leaders to deliver exceptional technical talent for mission-critical projects and digital transformation initiatives.' },
+    { number: '500+', label: 'Elite Tech Professionals - Curated network of senior developers, architects, and engineering leaders across full-stack, cloud, AI/ML, and emerging technologies.' },
+    { number: '150+', label: 'Fortune 500 Partnerships - Trusted by industry leaders to deliver exceptional technical talent for mission-critical projects and digital transformation initiatives.' },
     { number: '95%', label: 'Placement Success Rate - Proven track record of successful long-term placements with comprehensive technical vetting and cultural fit assessment.' },
     { number: '100+', label: 'Technical Competencies Evaluated - From React/Node.js to Kubernetes, from cybersecurity to machine learning, covering the full spectrum of modern tech stacks.' },
   ];

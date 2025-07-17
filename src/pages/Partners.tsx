@@ -7,35 +7,35 @@ const Partners = () => {
     // Industry Categories
     { 
       name: 'Service Implementation (SI)', 
-      
+      type: 'corporate'
     },
     { 
       name: 'Manufacturing Clients', 
-      
+      type: 'corporate'
     },
     { 
       name: 'Insurance Clients', 
-      
+      type: 'corporate'
     },
     { 
       name: 'Health & Welfare (HRO) Clients', 
-      
+      type: 'corporate'
     },
     { 
       name: 'Financial Clients', 
-      
+      type: 'corporate'
     },
     { 
       name: 'Automotive Clients', 
-      
+      type: 'corporate'
     },
     { 
       name: 'Engineering Clients', 
-      
+      type: 'corporate'
     },
     { 
       name: 'US Government & Federal Customers', 
-      
+      type: 'government'
     },
   ];
 
@@ -63,10 +63,10 @@ const Partners = () => {
   ];
 
   const stats = [
-    { number: '10+', label: 'Strategic Partners and Growing.' },
-    { number: '500+', label: 'Tech Professionals Placed and Growing.' },
-    { number: '95%', label: 'Customer/ Partner Satisfaction & Growing.' },
-    { number: '100%', label: 'Highly Talented Technical Recruitment Team & Growing.' },
+    { number: '50+', label: 'Strategic Partners' },
+    { number: '10K+', label: 'Professionals Placed' },
+    { number: '95%', label: 'Partner Satisfaction' },
+    { number: '100%', label: 'Highly Talented Technical Recruitment Team' },
   ];
 
   return (
