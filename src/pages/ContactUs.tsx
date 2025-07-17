@@ -58,8 +58,8 @@ const ContactUs = () => {
       address: "Indrustrial Area Phase -3",
       email: "hello@therecruitiq.com",
       type: "North Operations",
-      lat: 47.6062,
-      lng: -122.3321,
+      lat: 30.715261,
+      lng: 76.707771,
     },
   ];
 
