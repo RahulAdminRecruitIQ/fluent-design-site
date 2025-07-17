@@ -53,7 +53,7 @@ const ContactUs = () => {
       lng: 77.328674,
     },
     {
-      city: "Mohali, SAS Nagar,
+      city: "Mohali, SAS Nagar,"
       country: "INDIA",
       address: "Indrustrial Area Phase -3",
       email: "hello@therecruitiq.com",
