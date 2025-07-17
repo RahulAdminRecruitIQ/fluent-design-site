@@ -117,7 +117,7 @@ const Footer = () => {
                   
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email Us</p>
+                  <p className="text-sm text-muted-foreground">Business Hours - 09:30 MA to 06:00 PM Eastern</p>
                   <a className="text-sm text-foreground hover:text-orange-400 transition-colors">
                     
                   </a>
