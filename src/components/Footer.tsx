@@ -118,8 +118,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <a href="tel:+1-555-0123" className="text-sm text-foreground hover:text-orange-400 transition-colors">
-                    +1 (555) 012-3456
+                  <a className="text-sm text-foreground hover:text-orange-400 transition-colors">
+                    
                   </a>
                 </div>
               </div>
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="border-t border-border/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 The RecruitIQ. All rights reserved.
+              © 2025 The RecruitIQ. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="#" className="text-muted-foreground hover:text-orange-400 transition-colors animated-underline">
