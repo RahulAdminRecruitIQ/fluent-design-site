@@ -63,8 +63,8 @@ const Partners = () => {
   ];
 
   const stats = [
-    { number: '10+', label: 'Strategic Partners and Growing --' },
-    { number: '500+', label: 'Tech Professionals Placed and Growing --' },
+    { number: '10+', label: 'Strategic Partners and Growing...' },
+    { number: '100+', label: 'Tech Professionals Placed and Growing...' },
     { number: '95%', label: 'Customer/ Partner Satisfaction & Growing' },
     { number: '100%', label: 'Highly Talented Technical Recruitment Team & Growing' },
   ];
