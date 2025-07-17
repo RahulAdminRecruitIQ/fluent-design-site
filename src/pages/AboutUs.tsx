@@ -5,7 +5,7 @@ const AboutUs = () => {
     { number: '100+', label: '“Trusted by hundreds of professionals who’ve found the right fit”. “We’ve helped 500+ professionals land roles that fit, grow, and inspire. Our approach goes beyond placement — it’s about long-term success.”' },
     { number: '98%', label: '“Trusted to deliver — with one of the highest success           rates in the industry”with “Proven track record of successful placements and         client satisfaction”' },
     { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with “Seamless Communication. Real-Time Updates.”' },
-    { number: 'Tech Hiring', label: '“We work with engineers, architects, and product talent who’ve delivered in the real world — in code, in systems, and in growth. They're not just experienced — they’re execution-ready.”' },
+    { number: 'Tech Hiring', label: '“We work with engineers, architects, and product talent who’ve delivered in the real world — in code, in systems, and in growth. They\'re not just experienced — they’re execution-ready.”' },
   ];
 
   const team = [
