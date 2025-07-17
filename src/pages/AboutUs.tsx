@@ -11,7 +11,7 @@ const AboutUs = () => {
   const team = [
     {
       name: 'Wasim',
-      role: 'Head of Accounts & Finance',
+      role: 'Head - Accounts & Finance',
       image: '/Pic/Wasim .webp',
     },
     {
@@ -21,12 +21,12 @@ const AboutUs = () => {
     },
     {
       name: 'Thomas Minacale',
-      role: 'Head of Talent Acquisition',
+      role: 'Head - Talent Acquisition',
       image: '/Pic/Thomas Minacale.webp',
     },
     {
       name: 'Carol Frugman',
-      role: 'Director of Client Relations',
+      role: 'Director - Client Relations',
       image: '/Pic/Carol Frugman.webp',
     },
 
