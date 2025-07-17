@@ -14,32 +14,16 @@ const AboutUs = () => {
       role: 'Head of Accounts & Finance',
       image: '/Pic/Wasim .webp',
     },
-    {
-      name: 'Sarah J.',
-      role: 'VP of Operations',
-      image: '/Pic/Sarah.J.webp',
-    },
-    {
-      name: 'Thomas Minacale',
-      role: 'Head of Talent Acquisition',
-      image: '/Pic/Thomas Minacale.webp',
-    },
-    {
-      name: 'Carol Frugman',
-      role: 'Director of Client Relations',
-      image: '/Pic/Carol Frugman.webp',
-    },
+  
 
     {
       name: 'Linda Jackson Jr.',
       role: 'Senior Recruitment Specialist',
       image: '/Pic/Linda Jackson Jr..webp',
     },
-     {
-      name: 'Ms. Markende',
-      role: 'Founder & CPO',
-      image: '/Pic/ms Markende.jpg',
-    },
+      
+    
+      
   ];
 
 
