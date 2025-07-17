@@ -129,7 +129,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-sm text-foreground">San Francisco, CA</p>
+                  <p className="text-sm text-foreground">Wyoming, USA </p>
                 </div>
               </div>
             </div>
