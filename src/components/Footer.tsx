@@ -117,7 +117,7 @@ const Footer = () => {
                   <Phone className="w-4 h-4 text-orange-400" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
+                  <p className="text-sm text-muted-foreground">Email Us</p>
                   <a className="text-sm text-foreground hover:text-orange-400 transition-colors">
                     
                   </a>
