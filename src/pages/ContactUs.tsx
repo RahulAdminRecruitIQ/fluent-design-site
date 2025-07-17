@@ -23,51 +23,48 @@ const ContactUs = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
       description: 'Mon-Fri 9am-6pm EST',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '123 Business Street, Suite 100',
-      description: 'New York, NY 10001',
+      details: '1309 Coffeen Avenue STE 1200',
+      description: 'Sheridan Wyoming, 82801',
     },
     {
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday',
-      description: '9:00 AM - 6:00 PM EST',
+      description: '9:30 AM - 6:00 PM EST',
     },
   ];
 
   const officeLocations = [
     {
-      city: "New York",
+      city: "Sheridan",
       country: "USA",
-      address: "123 Business Street, Suite 100",
-      phone: "+1 (555) 123-4567",
+      address: "1309 Coffeen Avenue STE 1200",
       type: "Headquarters",
-      lat: 40.7128,
-      lng: -74.0060,
+      lat: 43.075970,
+      lng: -107.290283,
     },
     {
-      city: "San Francisco",
-      country: "USA",
-      address: "456 Tech Avenue, Floor 15",
-      phone: "+1 (555) 234-5678",
-      type: "West Coast Hub",
-      lat: 37.7749,
-      lng: -122.4194,
+      city: "Noida, UP",
+      country: "INDIA",
+      address: "Cyber Spark, Sec 124",
+      type: "Westhub",
+      lat: 28.535517,
+      lng: 77.391029,
     },
     {
-      city: "Seattle",
-      country: "USA",
-      address: "654 Pacific Northwest Plaza",
-      phone: "+1 (555) 567-8901",
-      type: "Northwest Operations",
-      lat: 47.6062,
-      lng: -122.3321,
+      city: "Mohali, SAS Nagar",
+      country: "INDIA",
+      address: "Indrustrial Phase-6",
+      type: "NorthHub",
+      lat: 30.707600,
+      lng: 76.715126,
     },
+    
   ];
 
   // Create connections from New York HQ to all other offices for the world map
