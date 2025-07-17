@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutUs = () => {
   const stats = [
-    { number: '100+', label: '“Trusted by hundreds of professionals who’ve found the right fit”. “We’ve helped 500+ professionals land roles that fit, grow, and inspire. Our approach goes beyond placement — it’s about long-term success.”' },
-    { number: '98%', label: '“Trusted to deliver — with one of the highest success           rates in the industry”with “Proven track record of successful placements and         client satisfaction”' },
-    { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with “Seamless Communication. Real-Time Updates.”' },
-    { number: 'Tech Hiring', label: '“We work with engineers, architects, and product talent who’ve delivered in the real world — in code, in systems, and in growth. They\'re not just experienced — they’re execution-ready.”' },
+    { number: '100+', label: '"Trusted by hundreds of professionals who've found the right fit". "We've helped 500+ professionals land roles that fit, grow, and inspire. Our approach goes beyond placement — it's about long-term success."' },
+    { number: '98%', label: '"Trusted to deliver — with one of the highest success           rates in the industry"with "Proven track record of successful placements and         client satisfaction"' },
+    { number: '100%', label: 'Dedicated Account Managers for Every Client & Candidate with "Seamless Communication. Real-Time Updates."' },
+    { number: 'Tech Hiring', label: '"We work with engineers, architects, and product talent who've delivered in the real world — in code, in systems, and in growth. They\'re not just experienced — they're execution-ready."' },
   ];
 
   const team = [
@@ -19,8 +19,27 @@ const AboutUs = () => {
       role: 'Senior Recruitment Specialist',
       image: '/Pic/Linda Jackson Jr..webp',
     },
+    {
+      name: 'Sarah Johnson',
+      role: 'Technical Talent Acquisition Lead',
+      image: '/Pic/Sarah.J.webp',
+    },
+    {
+      name: 'Carol Frugman',
+      role: 'Client Relations Manager',
+      image: '/Pic/Carol Frugman.webp',
+    },
+    {
+      name: 'Thomas Minacale',
+      role: 'Senior Technical Recruiter',
+      image: '/Pic/Thomas Minacale.webp',
+    },
+    {
+      name: 'Ms. Markende',
+      role: 'Operations Director',
+      image: '/Pic/ms Markende.jpg',
+    },
   ];
-
 
   return (
     <div className="min-h-screen pt-24">
@@ -129,12 +148,12 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div
                 key={member.name}
                 className="floating-card p-8 text-center group hover:scale-105 transition-all duration-500 animate-slide-up"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative mb-6 mx-auto w-32 h-32">
                   <img
