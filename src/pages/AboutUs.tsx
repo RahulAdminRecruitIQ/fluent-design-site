@@ -14,16 +14,11 @@ const AboutUs = () => {
       role: 'Head of Accounts & Finance',
       image: '/Pic/Wasim .webp',
     },
-  
-
     {
       name: 'Linda Jackson Jr.',
       role: 'Senior Recruitment Specialist',
       image: '/Pic/Linda Jackson Jr..webp',
     },
-
-    
-      
   ];
 
 
