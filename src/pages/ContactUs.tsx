@@ -40,8 +40,8 @@ const ContactUs = () => {
       country: "USA",
       address: "Sheridan Wyoming 82801",
       type: "Headquarters",
-      lat: 43.075970,
-      lng: -107.290283,
+      lat: 40.7128,
+      lng: -74.0060,
     },
     {
       city: "Noida, UP",
@@ -49,11 +49,11 @@ const ContactUs = () => {
       address: "Sec-124, Floor 15",
       email:"hello@therecruitiq.com",
       type: "Cyber Hub",
-      lat: 28.548349,
-      lng: 77.328674,
+      lat: 37.7749,
+      lng: -122.4194,
     },
     {
-      city: "Mohali, SAS Nagar,"
+      city: "Mohali, SAS Nagar,
       country: "INDIA",
       address: "Indrustrial Area Phase -3",
       email: "hello@therecruitiq.com",
