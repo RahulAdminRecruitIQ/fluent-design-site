@@ -78,29 +78,15 @@ const TalentPool = () => {
     {
       quote: "They understood exactly what I was looking for and helped me land a role within two weeks.",
       name: "DevOps Engineer",
-      location: "Dallas, TX",
+      location: "Dallas",
       image: testimonial1
     },
     {
-      quote: “They quickly understood my goals and aligned me with the right opportunity — I landed the role in under two weeks.",
-      name: "Data Engineer, Northern Trust", 
-      location: "New Jersey, NJ",
-      
-    },
-    {
-      quote: “They matched my skills and expectations precisely, resulting in an offer from a company I genuinely align with — all within two weeks.",
-      name: "Business Analyst, BA (JMPC)", 
-      location: "New York, NY",
-  
-    },
-  {
-      quote: “From the very first call, they understood my profile and priorities — and helped me land a role faster than I expected.",
-      name: "Solution Architect- Citi Bank", 
-      location: "LA,CA",
-      
-    },
-  
-    
+      quote: "The process was smooth, and I appreciated the transparency at every step.",
+      name: "AWS Engineer", 
+      location: "Toronto",
+      image: testimonial2
+    }
   ];
 
   const processSteps = [
